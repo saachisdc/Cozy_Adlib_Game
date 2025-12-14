@@ -24,7 +24,7 @@ export default function StoryLayout() {
         </p>
         <p className="footer__description">
           All images, 3D models, and content are original and created by Saachi
-          Sadchatheeswaran. Do not copy, download or sell.
+          Sadcha. Do not copy, download or sell.
         </p>
       </section>
     </div>
