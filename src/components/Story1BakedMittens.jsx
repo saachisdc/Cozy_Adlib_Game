@@ -29,12 +29,24 @@ export const Story1BakedMittens = {
       afterChoicePrefix: " with a sweet treat. ",
 
       branches: {
-        coffee:
+        coffee: [
           "The latte swirl melted into the surface while a puff of steam curled on top. ",
-        mittens:
+          "I wrapped my hands around the cup, letting the heat settle into my palms. ",
+          "The surface of the coffee shivered faintly as I set it down, still too hot to sip. ",
+          "Steam drifted upward in slow spirals, carrying the familiar bitterness with it. ",
+        ],
+        mittens: [
           "The smell of warm yarn invaded my throat, making me feel disturbingly cozy inside. ",
-        donut:
+          "The damp wool pressed its scent into my fingers, soft and uncomfortably close. ",
+          "Moist heat clung to the mittens, carrying a lanolin smell that made my stomach tighten. ",
+          "The wool steamed as if fresh from the oven, and that just felt wrong. ",
+        ],
+        donut: [
           "The redundancy was not lost on me, but I'm an adult and can get two treats if I want. ",
+          "I hesitated only long enough to acknowledge the excess before accepting it. ",
+          "The decision felt unnecessary, but I made it anyway, without much resistance. ",
+          "I accepted the extra sweetness with a quiet sense of defiance. ",
+        ],
       },
 
       after: "I snagged a table by the window and shucked off my ",
@@ -55,12 +67,24 @@ export const Story1BakedMittens = {
       afterChoicePrefix: " next to my plate. ",
 
       branches: {
-        mittens:
-          "My defrosting fingers smelled lightly of lanolin, which made my nose wrinkle. ",
-        coffee:
+        mittens: [
+          "I wiggled my newly freed, defrosting fingers in delight.",
+          "Warmth seeped back into my fingers, carrying a faint wooly scent with it. ",
+          "The soft smell of naturally-dyed yarn lingered as my hands slowly came back to life. ",
+          "My fingers thawed gradually, the quiet comfort of the bakery settling in. ",
+        ],
+        coffee: [
           "My defrosting fingers smelled lightly of early mornings, late nights, and an overactive caffeine dependency. ",
-        donut:
+          "The roasted coffee ground scent clinging to my hands felt less like coffee and more like a lifestyle choice. ",
+          "My fingers carried a bitter but robust sharpness that suggested I had gone too far already. ",
+          "The roasted coffee ground smell rising sharply from my hands made me question all my life decisions up to this point. ",
+        ],
+        donut: [
           "My defrosting fingers smelled lightly of yeast and glaze, but that made me right at home in this little shop. ",
+          "Sugar and dough clung to my hands, sweet enough that I barely questioned it. ",
+          "The smell of glaze followed my fingers, pleasant and faintly ridiculous. ",
+          "My hands picked up a sugary warmth that felt indulgent, but harmless. ",
+        ],
       },
 
       after: "Sitting back, I contentedly took a big bite out of my ",
@@ -81,17 +105,32 @@ export const Story1BakedMittens = {
       afterChoicePrefix: " ",
 
       branches: {
-        donut:
+        donut: [
           "and let the sweet glaze mingle with the bitter caffeine already coating my stomach. ",
-        coffee: "quite literally. My tooth cracked the porcelain...loudly. ",
-        mittens: "and chewed slowly. The warm yarn caught between my teeth. ",
+          "and savored the soft sweetness as it settled comfortably alongside the coffee. ",
+          "and welcomed the familiar mix of sugar and warmth spreading through me. ",
+          "and felt the sweetness soften the sharp edge of the caffeine already there. ",
+        ],
+        coffee: [
+          "quite literally. My tooth cracked the porcelain...loudly. ",
+          "with immediate regret as my teeth met something that should not be bitten. ",
+          "before a sharp, unmistakable crunch snapped me fully back to reality. ",
+          "and was rewarded with a sound that drew several concerned glances. ",
+        ],
+        mittens: [
+          "and chewed slowly. The warm yarn caught between my teeth. ",
+          "and paused, registering the unmistakable resistance of wool. ",
+          "and realized too late that the texture was deeply incorrect. ",
+          "and kept chewing, trying not to think too hard about the fibers. ",
+        ],
       },
 
+      // Score-based endings: map from correct-count -> ending text
       after:
         "I absently watched the snowflakes dance outside while listening to the bustling hum of other patrons munching away. What a delightfully cozy day.",
     },
   ],
-  // Score-based endings: map from correct-count -> ending text
+
   endings: {
     0: "Sweat gathered at my brow while I stared resolutely out the window, feeling the worried gazes of everyone else on the back of my neck. What a ridiculously unhinged day.",
     1: "I watched the snowflakes dance outside while I, and likely everyone now staring at me, wondered at my own actions. What an incredibly odd day.",

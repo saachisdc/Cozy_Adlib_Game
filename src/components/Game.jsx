@@ -13,6 +13,15 @@ function replaceLast(haystack, needle, replacement) {
   );
 }
 
+function pickRandom(value) {
+  if (Array.isArray(value)) {
+    if (value.length === 0) return "";
+    const idx = Math.floor(Math.random() * value.length);
+    return value[idx];
+  }
+  return value ?? "";
+}
+
 export default function Game({ story = Story1BakedMittens }) {
   const speed = story.speed ?? 40;
 
@@ -68,7 +77,7 @@ export default function Game({ story = Story1BakedMittens }) {
       const label = choice?.label ?? choiceId;
 
       const prefix = step.afterChoicePrefix ?? "";
-      const branchInsert = step.branches?.[choiceId] ?? "";
+      const branchInsert = pickRandom(step.branches?.[choiceId]);
       const after = step.after ?? "";
 
       // Determine correctness for this step
