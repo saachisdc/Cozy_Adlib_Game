@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  bottom: 1rem;
+  position: fixed;
+  flex-direction: column;
+
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.footer__hr {
+  font-size: var(--size-xxs);
+  width: 100%;
+  border-top: 1px solid var(--clr-primary);
+  margin-bottom: 1rem;
+}
+
+.footer__description {
+  font-size: var(--size-xs);
+  max-width: 60ch;
+}
