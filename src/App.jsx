@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-/* import Main from "./Main/Main";
-import Fall29aoi from "./AoI/Fall2029/Fall2029aoi"; */
+
 import "/styles/modern-normalize.css";
 import "/styles/global.css";
 import "/styles/utility.css";
