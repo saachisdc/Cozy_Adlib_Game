@@ -91,6 +91,13 @@ export const Story1BakedMittens = {
         "I absently watched the snowflakes dance outside while listening to the bustling hum of other patrons munching away. What a delightfully cozy day.",
     },
   ],
+  // Score-based endings: map from correct-count -> ending text
+  endings: {
+    0: "Sweat gathered at my brow while I stared resolutely out the window, feeling the worried gazes of everyone else on the back of my neck. What a ridiculously unhinged day.",
+    1: "I watched the snowflakes dance outside while I, and likely everyone now staring at me, wondered at my own actions. What an incredibly odd day.",
+    2: "I absently watched the snowflakes dance outside while a few observable customers in the bakery watched me in confusion. But I see no reason to call this anything but a slightly off but cozy day.",
+    // 3 will default to the normal final 'after' text below if not provided.
+  },
 };
 
 export default Story1BakedMittens;

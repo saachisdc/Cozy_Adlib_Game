@@ -76,19 +76,27 @@ export default function Game({ story = Story1BakedMittens }) {
       const newScore = score + (wasCorrect ? 1 : 0);
 
       // 1) Replace the last placeholder with the chosen label
-      // 2) Append the branch text and the after-text
+      // 2) Append the branch text and the after-text (or per-story ending)
       setStoryText((prev) => {
         const replaced = replaceLast(prev, PLACEHOLDER, label);
 
-        // If this was the final step, append the score to the last line.
+        // If this was the final step, choose an ending provided by the story
+        // (story.endings) or fall back to the final step's `after` text.
         const isLast = stepIndex === (story.steps?.length ?? 0) - 1;
         if (isLast) {
+          const total = story.steps?.length ?? 0;
+          const chosenEnding =
+            story.endings?.[newScore] ??
+            story.steps?.[story.steps.length - 1]?.after ??
+            "I absently watched the snowflakes dance outside while listening to the bustling hum of other patrons munching away. What a delightfully cozy day.";
+
           return (
             replaced +
             prefix +
             branchInsert +
-            after +
-            ` You got ${newScore}/${story.steps.length} choices correct.`
+            " " +
+            chosenEnding +
+            ` You got ${newScore}/${total} choices correct.`
           );
         }
 
