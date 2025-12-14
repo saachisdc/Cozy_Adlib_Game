@@ -1,0 +1,36 @@
+{
+  "name": "saachisadchawt",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "vercel --prod"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3",
+    "vite": "^5.3.3",
+    "vite-plugin-restart": "^0.4.1"
+  },
+  "dependencies": {
+    "@react-spring/three": "^9.7.4",
+    "@react-three/drei": "9.108",
+    "@react-three/fiber": "^8.16.8",
+    "@react-three/postprocessing": "^2.16.3",
+    "d3": "^7.9.0",
+    "framer-motion": "^11.11.17",
+    "leva": "^0.9.34",
+    "r3f-perf": "7.2",
+    "react": "18.3",
+    "react-dom": "18.3",
+    "react-draggable": "^4.4.6",
+    "react-router-dom": "^6.26.1",
+    "react-spring": "^9.7.4",
+    "react-transition-group": "^4.4.5",
+    "recharts": "^2.13.3",
+    "three": "^0.166.1",
+    "vercel": "^32.3.0",
+    "victory": "^37.0.2"
+  }
+}

@@ -1,0 +1,105 @@
+:root {
+  /* fonts */
+  --font-primary: "Inter", serif;
+  --font-secondary: "Source Code Pro", serif;
+
+  /* colours */
+  --colour-dark: #030712;
+  --colour-light: #e2e8f0;
+  --colour-text: #94a3b8;
+  --colour-muted: #6b7c94;
+  --colour-slate50: #f8fafc;
+  --colour-slate100: #ebf2fa;
+
+  /* sizes */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em+0.5rem);
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--colour-dark);
+  color: var(--colour-light);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.025em;
+}
+
+p {
+  color: var(--colour-text);
+}
+
+a {
+  color: var(--colour-slate50);
+}
+
+strong {
+  color: var(--colour-light);
+  font-weight: 900;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: solid var(--colour-light);
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--colour-slate50);
+  outline: 1px solid var(--colour-slate50);
+}
