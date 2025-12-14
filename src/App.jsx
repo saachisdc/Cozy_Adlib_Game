@@ -10,7 +10,7 @@ export default function App() {
   return (
     <Router>
       <div className="container">
-        <h1> Hello World </h1>
+        <h1> Cozy Adlib Game </h1>
         <p>
           'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
