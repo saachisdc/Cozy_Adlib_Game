@@ -15,7 +15,9 @@ export const Story1BakedMittens = {
   // - after: text typed AFTER the branch insert (until the next step)
   steps: [
     {
-      id: "drink",
+      id: "coffee",
+      // correct choice for step 0
+      correct: "coffee",
       before: "",
 
       choices: [
@@ -40,6 +42,8 @@ export const Story1BakedMittens = {
 
     {
       id: "mittens",
+      // correct choice for step 1
+      correct: "mittens",
       before: "",
 
       choices: [
@@ -64,6 +68,8 @@ export const Story1BakedMittens = {
 
     {
       id: "donut",
+      // correct choice for step 2
+      correct: "donut",
       before: "",
 
       choices: [

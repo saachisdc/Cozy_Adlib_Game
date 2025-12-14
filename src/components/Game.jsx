@@ -19,6 +19,9 @@ export default function Game({ story = Story1BakedMittens }) {
   // Full story string that the Typewriter reveals
   const [storyText, setStoryText] = useState(story.intro);
 
+  // How many correct choices the user has made so far
+  const [score, setScore] = useState(0);
+
   // Which choice-step we’re on
   const [stepIndex, setStepIndex] = useState(0);
 
@@ -35,6 +38,7 @@ export default function Game({ story = Story1BakedMittens }) {
     setStoryText(story.intro);
     setStepIndex(0);
     setWaitingForChoice(false);
+    setScore(0);
     setResetSignal((s) => s + 1);
   }, [story]);
 
@@ -67,24 +71,43 @@ export default function Game({ story = Story1BakedMittens }) {
       const branchInsert = step.branches?.[choiceId] ?? "";
       const after = step.after ?? "";
 
+      // Determine correctness for this step
+      const wasCorrect = !!step.correct && step.correct === choiceId;
+      const newScore = score + (wasCorrect ? 1 : 0);
+
       // 1) Replace the last placeholder with the chosen label
       // 2) Append the branch text and the after-text
       setStoryText((prev) => {
         const replaced = replaceLast(prev, PLACEHOLDER, label);
+
+        // If this was the final step, append the score to the last line.
+        const isLast = stepIndex === (story.steps?.length ?? 0) - 1;
+        if (isLast) {
+          return (
+            replaced +
+            prefix +
+            branchInsert +
+            after +
+            ` You got ${newScore}/${story.steps.length} choices correct.`
+          );
+        }
+
         return replaced + prefix + branchInsert + after;
       });
 
       // Resume typing + advance to next step.
       setWaitingForChoice(false);
       setStepIndex((i) => i + 1);
+      setScore(newScore);
     },
-    [step]
+    [step, score, stepIndex, story]
   );
 
   const restart = useCallback(() => {
     setStoryText(story.intro);
     setStepIndex(0);
     setWaitingForChoice(false);
+    setScore(0);
     setResetSignal((s) => s + 1);
   }, [story]);
 
