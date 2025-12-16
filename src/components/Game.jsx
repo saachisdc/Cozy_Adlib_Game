@@ -3,6 +3,11 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Typewriter from "./Typewriter";
 import Story1BakedMittens from "./Story1BakedMittens";
 
+import "/styles/modern-normalize.css";
+import "/styles/global.css";
+import "/styles/components/storylayout.css";
+import "/styles/utility.css";
+
 const PLACEHOLDER = "...choose an icon...";
 
 function replaceLast(haystack, needle, replacement) {

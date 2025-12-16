@@ -1,0 +1,35 @@
+.story {
+  display: block; /* allow full width and wrapping */
+  line-height: 1.75rem;
+}
+
+/* Caret element appended by the Typewriter component. */
+.caret {
+  display: inline-block;
+  width: 0.12rem;
+  height: 1rem;
+  margin-left: 0.15em;
+  background: currentColor;
+  vertical-align: text-bottom;
+  animation: blink-caret 0.9s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.game_btn {
+  display: flex;
+
+  flex-direction: row;
+  text-align: center;
+
+  gap: 1rem;
+  margin-bottom: 1rem;
+}

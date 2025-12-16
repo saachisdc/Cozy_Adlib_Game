@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tangerine:wght@400;700&display=swap");
+
 :root {
   /* fonts */
-  --font-primary: "Inter", serif;
+  --font-primary: "Open Sans", serif;
   --font-secondary: "Source Code Pro", serif;
 
   /* colours */
