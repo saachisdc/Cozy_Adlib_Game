@@ -137,6 +137,63 @@ export const Story1BakedMittens = {
     2: "I absently watched the snowflakes dance outside while a few observable customers in the bakery watched me in confusion. But I see no reason to call this anything but a slightly off but cozy day.",
     // 3 will default to the normal final 'after' text below if not provided.
   },
+
+  unhingedModel: {
+    // These are your "feature lists" (words you want to detect)
+    weirdWords: [
+      "lanolin",
+      "cracked",
+      "wrong",
+      "tighten",
+      "crunch",
+      "regret",
+      "fibers",
+      "uncomfortably",
+      "disturbingly",
+      "question",
+      "shivered",
+    ],
+
+    cozyWords: [
+      "warm",
+      "familiar",
+      "steam",
+      "comfort",
+      "settle",
+      "settling",
+      "soft",
+      "cozy",
+      "delight",
+      "welcomed",
+      "savored",
+    ],
+
+    selfAwareWords: [
+      "redundancy",
+      "defiance",
+      "anyway",
+      "unnecessary",
+      "excess",
+      "lifestyle",
+      "decisions",
+      "questioned",
+      "regret",
+      "loudly",
+      "bitter",
+    ],
+
+    // These numbers control how much each feature matters.
+    // Keep them simple integers at first.
+    weights: {
+      wrongChoice: 2, // wrong choices push score up a lot
+      weirdHit: 2, // weird words push score up
+      selfAwareHit: 1, // self-aware words push score up a little
+      cozyHit: -1, // cozy words pull score down
+    },
+
+    clampMin: 0,
+    clampMax: 10,
+  },
 };
 
 export default Story1BakedMittens;

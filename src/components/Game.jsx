@@ -2,6 +2,8 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Typewriter from "./Typewriter";
 import Story1BakedMittens from "./Story1BakedMittens";
+//temp bit to test unhinged score - DELETE LATER!!!
+import { runUnhingedScoreTest } from "./tmptestunhingedscore";
 
 import "/styles/modern-normalize.css";
 import "/styles/global.css";
@@ -55,6 +57,11 @@ export default function Game({ story = Story1BakedMittens }) {
     setScore(0);
     setResetSignal((s) => s + 1);
   }, [story]);
+
+  //temp bit to test unhinged score - DELETE LATER!!!
+  useEffect(() => {
+    runUnhingedScoreTest();
+  }, []);
 
   // Kick off first placeholder after intro finishes typing:
   // We'll do it via onDone.
