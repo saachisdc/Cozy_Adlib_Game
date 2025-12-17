@@ -2,8 +2,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Typewriter from "./Typewriter";
 import Story1BakedMittens from "./Story1BakedMittens";
-//temp bit to test unhinged score - DELETE LATER!!!
-import { runUnhingedScoreTest } from "./tmptestunhingedscore";
+import { computeUnhingedScore } from "./UnhingedScore";
 
 import "/styles/modern-normalize.css";
 import "/styles/global.css";
@@ -44,6 +43,9 @@ export default function Game({ story = Story1BakedMittens }) {
   // When true: buttons are enabled + typewriter pauses
   const [waitingForChoice, setWaitingForChoice] = useState(false);
 
+  const [unhingedResult, setUnhingedResult] = useState(null);
+  // unhingedResult will become { score, label, breakdown } at the end
+
   // For restarting Typewriter internal state cleanly
   const [resetSignal, setResetSignal] = useState(0);
 
@@ -56,12 +58,8 @@ export default function Game({ story = Story1BakedMittens }) {
     setWaitingForChoice(false);
     setScore(0);
     setResetSignal((s) => s + 1);
+    setUnhingedResult(null);
   }, [story]);
-
-  //temp bit to test unhinged score - DELETE LATER!!!
-  useEffect(() => {
-    runUnhingedScoreTest();
-  }, []);
 
   // Kick off first placeholder after intro finishes typing:
   // We'll do it via onDone.
@@ -98,27 +96,31 @@ export default function Game({ story = Story1BakedMittens }) {
 
       // 1) Replace the last placeholder with the chosen label
       // 2) Append the branch text and the after-text (or per-story ending)
+      const isLast = stepIndex === (story.steps?.length ?? 0) - 1;
+      const total = story.steps?.length ?? 0;
+
       setStoryText((prev) => {
         const replaced = replaceLast(prev, PLACEHOLDER, label);
 
-        // If this was the final step, choose an ending provided by the story
-        // (story.endings) or fall back to the final step's `after` text.
-        const isLast = stepIndex === (story.steps?.length ?? 0) - 1;
         if (isLast) {
-          const total = story.steps?.length ?? 0;
           const chosenEnding =
             story.endings?.[newScore] ??
-            story.steps?.[story.steps.length - 1]?.after ??
+            step.after ??
             "I absently watched the snowflakes dance outside while listening to the bustling hum of other patrons munching away. What a delightfully cozy day.";
 
-          return (
-            replaced +
-            prefix +
-            branchInsert +
-            " " +
-            chosenEnding +
-            ` You got ${newScore}/${total} choices correct.`
-          );
+          const finalText =
+            replaced + prefix + branchInsert + " " + chosenEnding;
+
+          // ✅ compute score ONLY here (last step only)
+          const result = computeUnhingedScore({
+            storyText: finalText,
+            correctCount: newScore,
+            totalSteps: total,
+            modelConfig: story.unhingedModel,
+          });
+          setUnhingedResult(result);
+
+          return finalText + ` You got ${newScore}/${total} choices correct.`;
         }
 
         return replaced + prefix + branchInsert + after;
@@ -138,6 +140,7 @@ export default function Game({ story = Story1BakedMittens }) {
     setWaitingForChoice(false);
     setScore(0);
     setResetSignal((s) => s + 1);
+    setUnhingedResult(null);
   }, [story]);
 
   // Buttons should always be visible:
@@ -162,6 +165,23 @@ export default function Game({ story = Story1BakedMittens }) {
         onDone={onTypeDone}
         resetSignal={resetSignal}
       />
+
+      {unhingedResult && (
+        <div className="score_panel">
+          <div>
+            <strong>Unhinged score:</strong> {unhingedResult.score}/10 —{" "}
+            {unhingedResult.label}
+          </div>
+
+          {/* Optional debug info while you’re tuning */}
+          <div style={{ fontSize: 12, opacity: 0.8, marginTop: 6 }}>
+            wrongChoices: {unhingedResult.breakdown.wrongChoices} | weirdHits:{" "}
+            {unhingedResult.breakdown.weirdHits} | cozyHits:{" "}
+            {unhingedResult.breakdown.cozyHits} | selfAwareHits:{" "}
+            {unhingedResult.breakdown.selfAwareHits}
+          </div>
+        </div>
+      )}
 
       <div className="game_btn">
         {buttons.map((c) => (
