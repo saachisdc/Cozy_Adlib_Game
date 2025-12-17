@@ -9,7 +9,7 @@ import "/styles/global.css";
 import "/styles/components/storylayout.css";
 import "/styles/utility.css";
 
-const PLACEHOLDER = "...choose an icon...";
+const PLACEHOLDER = "...choose a button below...";
 
 function replaceLast(haystack, needle, replacement) {
   const idx = haystack.lastIndexOf(needle);
@@ -44,6 +44,7 @@ export default function Game({ story = Story1BakedMittens }) {
   const [waitingForChoice, setWaitingForChoice] = useState(false);
 
   const [unhingedResult, setUnhingedResult] = useState(null);
+  const [showUnhinged, setShowUnhinged] = useState(false);
   // unhingedResult will become { score, label, breakdown } at the end
 
   // For restarting Typewriter internal state cleanly
@@ -59,25 +60,28 @@ export default function Game({ story = Story1BakedMittens }) {
     setScore(0);
     setResetSignal((s) => s + 1);
     setUnhingedResult(null);
+    setShowUnhinged(false);
   }, [story]);
 
   // Kick off first placeholder after intro finishes typing:
   // We'll do it via onDone.
   const onTypeDone = useCallback(() => {
+    // ✅ If story is finished and we already computed a score, reveal it now.
+    // When the story is finished, stepIndex will be past the last step, so `step` is null.
+    if (!step && unhingedResult) {
+      setShowUnhinged(true);
+      return;
+    }
+
     if (!step) return;
 
-    // Phase A: we just finished typing up to the current end of storyText.
-    // If we haven't appended the placeholder for this step yet, append it now
-    // (and DO NOT enable buttons yet).
     if (!storyText.endsWith(PLACEHOLDER)) {
       setStoryText((prev) => prev + (step.before ?? "") + PLACEHOLDER);
       return;
     }
 
-    // Phase B: storyText ends with PLACEHOLDER, which means the placeholder
-    // has now been fully typed to the screen. NOW we pause + enable buttons.
     setWaitingForChoice(true);
-  }, [step, storyText]);
+  }, [step, storyText, unhingedResult]);
 
   const handleChoice = useCallback(
     (choiceId) => {
@@ -118,9 +122,12 @@ export default function Game({ story = Story1BakedMittens }) {
             totalSteps: total,
             modelConfig: story.unhingedModel,
           });
+          setShowUnhinged(false);
           setUnhingedResult(result);
 
-          return finalText + ` You got ${newScore}/${total} choices correct.`;
+          return (
+            finalText + ` \n\nYou got ${newScore}/${total} choices correct.`
+          );
         }
 
         return replaced + prefix + branchInsert + after;
@@ -141,6 +148,7 @@ export default function Game({ story = Story1BakedMittens }) {
     setScore(0);
     setResetSignal((s) => s + 1);
     setUnhingedResult(null);
+    setShowUnhinged(false);
   }, [story]);
 
   // Buttons should always be visible:
@@ -166,7 +174,7 @@ export default function Game({ story = Story1BakedMittens }) {
         resetSignal={resetSignal}
       />
 
-      {unhingedResult && (
+      {showUnhinged && unhingedResult && (
         <div className="score_panel">
           <div>
             <strong>Unhinged score:</strong> {unhingedResult.score}/10 —{" "}

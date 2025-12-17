@@ -36,7 +36,7 @@ export const Story1BakedMittens = {
           "Steam drifted upward in slow spirals, carrying the familiar bitterness with it. ",
         ],
         mittens: [
-          "The smell of warm yarn invaded my throat, making me feel disturbingly cozy inside. ",
+          "The smell of warm yarn invaded my throat, making me feel disturbingly itchy inside. ",
           "The damp wool pressed its scent into my fingers, soft and uncomfortably close. ",
           "Moist heat clung to the mittens, carrying a lanolin smell that made my stomach tighten. ",
           "The wool steamed as if fresh from the oven, and that just felt wrong. ",
@@ -68,7 +68,7 @@ export const Story1BakedMittens = {
 
       branches: {
         mittens: [
-          "I wiggled my newly freed, defrosting fingers in delight.",
+          "I wiggled my newly freed, defrosting fingers in delight. ",
           "Warmth seeped back into my fingers, carrying a faint wooly scent with it. ",
           "The soft smell of naturally-dyed yarn lingered as my hands slowly came back to life. ",
           "My fingers thawed gradually, the quiet comfort of the bakery settling in. ",
@@ -87,7 +87,7 @@ export const Story1BakedMittens = {
         ],
       },
 
-      after: "Sitting back, I contentedly took a big bite out of my ",
+      after: " Sitting back, I contentedly took a big bite out of my ",
     },
 
     {
@@ -152,6 +152,7 @@ export const Story1BakedMittens = {
       "disturbingly",
       "question",
       "shivered",
+      "itchy",
     ],
 
     cozyWords: [
@@ -180,6 +181,7 @@ export const Story1BakedMittens = {
       "regret",
       "loudly",
       "bitter",
+      "incorrect",
     ],
 
     // These numbers control how much each feature matters.

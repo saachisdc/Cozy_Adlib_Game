@@ -1,6 +1,11 @@
 .story {
   display: block; /* allow full width and wrapping */
   line-height: 1.75rem;
+  white-space: pre-wrap;
+}
+
+.score_panel {
+  margin: 1rem 0;
 }
 
 /* Caret element appended by the Typewriter component. */
