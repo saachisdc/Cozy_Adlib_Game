@@ -111,7 +111,8 @@ export default function Game({ story = Story2MagicalCampfire }) {
           const chosenEnding =
             story.endings?.[newScore] ??
             step.after ??
-            "I absently watched the snowflakes dance outside while listening to the bustling hum of other patrons munching away. What a delightfully cozy day.";
+            story.defaultEnding ??
+            "The night settled around me, and I let myself breathe it in.";
 
           const finalText =
             replaced + prefix + branchInsert + " " + chosenEnding;
