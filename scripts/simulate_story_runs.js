@@ -5,7 +5,7 @@ import Story2MagicalCampfire from "../src/components/Story2MagicalCampfire.js";
 import { computeUnhingedScore } from "../src/components/UnhingedScore.js";
 
 const N = Number(process.argv[2] ?? 50);
-const OUT = process.argv[3] ?? `runs_${Story2MagicalCampfire.id}.csv`;
+const OUT = process.argv[3] ?? `runs_${Story1BakedMittens.id}.csv`;
 
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -95,9 +95,7 @@ const headers = [
   "label",
 ];
 
-const rows = Array.from({ length: N }, () =>
-  simulateOne(Story2MagicalCampfire)
-);
+const rows = Array.from({ length: N }, () => simulateOne(Story1BakedMittens));
 const csv =
   headers.join(",") +
   "\n" +
