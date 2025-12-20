@@ -1,6 +1,7 @@
 import fs from "fs";
-import Story2MagicalCampfire from "../src/components/Story2MagicalCampfire.js";
 import Story1BakedMittens from "../src/components/Story1BakedMittens.js";
+import Story2MagicalCampfire from "../src/components/Story2MagicalCampfire.js";
+
 import { computeUnhingedScore } from "../src/components/UnhingedScore.js";
 
 const N = Number(process.argv[2] ?? 50);
