@@ -87,7 +87,7 @@ export const Story3CrunchyVideoGame = {
         ],
       },
 
-      after: "I reached down in real life to a plate of ",
+      after: "Feeling peckish, I reached for a plate of ",
     },
 
     {
@@ -101,7 +101,7 @@ export const Story3CrunchyVideoGame = {
         { id: "videogame", label: "video game" },
         { id: "cookie", label: "chocolate chip cookie" },
       ],
-      afterChoicePrefix: "s with my other hand. ",
+      afterChoicePrefix: "s with a free hand. ",
 
       branches: {
         cookie: [
