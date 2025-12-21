@@ -1,8 +1,11 @@
 // Game.jsx
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Typewriter from "./Typewriter";
+
 import Story1BakedMittens from "./Story1BakedMittens";
 import Story2MagicalCampfire from "./Story2MagicalCampfire";
+import Story3CrunchyVideoGame from "./Story3CrunchyVideoGame";
+
 import { computeUnhingedScore } from "./UnhingedScore";
 
 import "/styles/modern-normalize.css";
@@ -29,7 +32,7 @@ function pickRandom(value) {
   return value ?? "";
 }
 
-export default function Game({ story = Story2MagicalCampfire }) {
+export default function Game({ story = Story3CrunchyVideoGame }) {
   const speed = story.speed ?? 40;
 
   // Full story string that the Typewriter reveals
