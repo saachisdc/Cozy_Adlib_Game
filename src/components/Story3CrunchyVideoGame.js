@@ -112,13 +112,19 @@ export const Story3CrunchyVideoGame = {
 
   unhingedModel: {
     // These are your "feature lists" (words you want to detect)
-    weirdWords: ["zombie", "dust-bunnies", "wood fiber", "nooks and crannies"],
+    weirdWords: [
+      "zombie",
+      "dust-bunnies",
+      "wood fiber",
+      "nooks and crannies",
+      "gruesome",
+    ],
 
     cozyWords: ["plush", "loved", "delightful", "happily", "dopamine"],
 
     selfAwareWords: [
       "no taste",
-      "gruesome",
+      "refused to let that bother me",
       "old",
       "tried my best",
       "unsatisfied",
