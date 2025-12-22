@@ -34,6 +34,29 @@ function pickRandom(value) {
   return value ?? "";
 }
 
+// NB baseline meaning helper
+
+function nbBaselineMeaning(label) {
+  if (label === "wholesome") return "cozy/wholesome baseline";
+  if (label === "totally unhinged") return "chaotic baseline";
+  return "neutral quirky baseline";
+}
+
+function compareCommentary(heuristicLabel, nbLabel) {
+  if (!heuristicLabel || !nbLabel) return "";
+
+  if (heuristicLabel === nbLabel) {
+    return "Agreement: the baseline ML and heuristic landed in the same vibe bucket.";
+  }
+
+  // The whole point of Option C:
+  if (nbLabel === "kinda odd" && heuristicLabel !== "kinda odd") {
+    return "Mismatch: NB treated this as neutral quirky narration, but the heuristic flagged stronger vibes (likely from specific trigger words or wrong choices).";
+  }
+
+  return "Mismatch: NB and the heuristic disagree — this is expected on unseen story text.";
+}
+
 export default function Game({ story = Story3CrunchyVideoGame }) {
   const speed = story.speed ?? 40;
 
@@ -67,6 +90,7 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
     setResetSignal((s) => s + 1);
     setUnhingedResult(null);
     setShowUnhinged(false);
+    setNbResult(null);
   }, [story]);
 
   // Kick off first placeholder after intro finishes typing:
@@ -210,13 +234,23 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
                 <strong>ML Naive Bayes Score:</strong> {nbResult.label} (p=
                 {nbResult.probs[nbResult.label].toFixed(2)})
               </div>
+              <div style={{ fontSize: 12, opacity: 0.8, marginTop: 6 }}>
+                NB is a baseline trained on Stories 1–2 (so Story 3 vocabulary
+                may look “neutral”).
+              </div>
             </div>
           )}
+
           {nbResult && unhingedResult && (
             <div style={{ marginTop: 4 }}>
               {nbResult.label === unhingedResult.label
                 ? "Match ✅"
                 : "Mismatch ⚠️"}
+            </div>
+          )}
+          {nbResult && unhingedResult && (
+            <div style={{ marginTop: 8, fontStyle: "italic", opacity: 0.9 }}>
+              {compareCommentary(unhingedResult.label, nbResult.label)}
             </div>
           )}
         </div>
