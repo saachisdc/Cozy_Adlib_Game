@@ -6,7 +6,7 @@ import Story3CrunchyVideoGame from "../src/components/Story3CrunchyVideoGame.js"
 import { computeUnhingedScore } from "../src/components/UnhingedScore.js";
 
 const N = Number(process.argv[2] ?? 50);
-const OUT = process.argv[3] ?? `runs_${Story3CrunchyVideoGame.id}.csv`;
+const OUT = process.argv[3] ?? `runs_${Story2MagicalCampfire.id}.csv`;
 
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -97,7 +97,7 @@ const headers = [
 ];
 
 const rows = Array.from({ length: N }, () =>
-  simulateOne(Story3CrunchyVideoGame)
+  simulateOne(Story2MagicalCampfire)
 );
 const csv =
   headers.join(",") +
