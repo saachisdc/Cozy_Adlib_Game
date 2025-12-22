@@ -7,6 +7,8 @@ import Story2MagicalCampfire from "./Story2MagicalCampfire";
 import Story3CrunchyVideoGame from "./Story3CrunchyVideoGame";
 
 import { computeUnhingedScore } from "./UnhingedScore";
+import nbModel from "../models/nb_model.json";
+import { predictVibe } from "../ml/nb";
 
 import "/styles/modern-normalize.css";
 import "/styles/global.css";
@@ -50,7 +52,7 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
   const [unhingedResult, setUnhingedResult] = useState(null);
   const [showUnhinged, setShowUnhinged] = useState(false);
   // unhingedResult will become { score, label, breakdown } at the end
-
+  const [nbResult, setNbResult] = useState(null);
   // For restarting Typewriter internal state cleanly
   const [resetSignal, setResetSignal] = useState(0);
 
@@ -130,6 +132,14 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
           setShowUnhinged(false);
           setUnhingedResult(result);
 
+          // for Story 3 only: run NB vibe predictor
+          const nb =
+            story.id === "story3_crunchy_video_game"
+              ? predictVibe(finalText, nbModel)
+              : null;
+
+          setNbResult(nb);
+
           return (
             finalText + ` \n\nYou got ${newScore}/${total} choices correct.`
           );
@@ -154,6 +164,7 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
     setResetSignal((s) => s + 1);
     setUnhingedResult(null);
     setShowUnhinged(false);
+    setNbResult(null);
   }, [story]);
 
   // Buttons should always be visible:
@@ -182,8 +193,8 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
       {showUnhinged && unhingedResult && (
         <div className="score_panel">
           <div>
-            <strong>Unhinged score:</strong> {unhingedResult.score}/10 —{" "}
-            {unhingedResult.label}
+            <strong>Unhinged Heuristic Score:</strong> {unhingedResult.score}/10
+            — {unhingedResult.label}
           </div>
 
           {/* Optional debug info while you’re tuning */}
@@ -193,6 +204,21 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
             {unhingedResult.breakdown.cozyHits} | selfAwareHits:{" "}
             {unhingedResult.breakdown.selfAwareHits}
           </div>
+          {nbResult && (
+            <div style={{ marginTop: 8 }}>
+              <div>
+                <strong>ML Naive Bayes Score:</strong> {nbResult.label} (p=
+                {nbResult.probs[nbResult.label].toFixed(2)})
+              </div>
+            </div>
+          )}
+          {nbResult && unhingedResult && (
+            <div style={{ marginTop: 4 }}>
+              {nbResult.label === unhingedResult.label
+                ? "Match ✅"
+                : "Mismatch ⚠️"}
+            </div>
+          )}
         </div>
       )}
 
