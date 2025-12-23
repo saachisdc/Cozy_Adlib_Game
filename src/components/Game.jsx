@@ -57,7 +57,17 @@ function compareCommentary(heuristicLabel, nbLabel) {
   return "Mismatch: NB and the heuristic disagree — this is expected on unseen story text.";
 }
 
-export default function Game({ story = Story3CrunchyVideoGame }) {
+// Optional: easy list for random selection later
+const STORIES = [
+  Story1BakedMittens,
+  Story2MagicalCampfire,
+  Story3CrunchyVideoGame,
+];
+
+export default function Game({ initialStory = Story3CrunchyVideoGame }) {
+  // 👇 Current active story
+  const [story, setStory] = useState(initialStory);
+
   const speed = story.speed ?? 40;
 
   // Full story string that the Typewriter reveals
@@ -191,6 +201,15 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
     setNbResult(null);
   }, [story]);
 
+  // Story selection helpers
+  const selectStory1 = () => setStory(Story1BakedMittens);
+  const selectStory2 = () => setStory(Story2MagicalCampfire);
+  const selectStory3 = () => setStory(Story3CrunchyVideoGame);
+  const selectRandomStory = () => {
+    const idx = Math.floor(Math.random() * STORIES.length);
+    setStory(STORIES[idx]);
+  };
+
   // Buttons should always be visible:
   // If the story is over, we can show the last step’s choices or disable all.
   const buttons = useMemo(() => {
@@ -204,7 +223,7 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
   return (
     <div className="container">
       <h1>{story.title}</h1>
-
+      {/* story */}
       <Typewriter
         className="story"
         text={storyText}
@@ -213,7 +232,7 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
         onDone={onTypeDone}
         resetSignal={resetSignal}
       />
-
+      {/* story score */}
       {showUnhinged && unhingedResult && (
         <div className="score_panel">
           <div>
@@ -255,7 +274,7 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
           )}
         </div>
       )}
-
+      {/* story choice buttons */}
       <div className="game_btn">
         {buttons.map((c) => (
           <button
@@ -268,10 +287,25 @@ export default function Game({ story = Story3CrunchyVideoGame }) {
           </button>
         ))}
       </div>
-
+      {/* story restart button */}
       <div style={{ marginTop: 12 }}>
         <button className="btn" onClick={restart}>
           restart
+        </button>
+      </div>
+      {/* story select buttons */}
+      <div className="game_btn">
+        <button className="btn btn-secondary" onClick={selectStory1}>
+          Story 1
+        </button>
+        <button className="btn btn-secondary" onClick={selectStory2}>
+          Story 2
+        </button>
+        <button className="btn btn-secondary" onClick={selectStory3}>
+          Story 3 🤖
+        </button>
+        <button className="btn btn-ghost" onClick={selectRandomStory}>
+          Random story 🎲
         </button>
       </div>
     </div>
