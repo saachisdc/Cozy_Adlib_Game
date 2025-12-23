@@ -1,7 +1,40 @@
+.title {
+  position: fixed; /* Positions the div relative to the viewport */
+  top: 0; /* Aligns the bottom edge of the div with the bottom of the screen */
+  left: 0; /* Aligns the left edge with the left side of the screen */
+  width: 100%; /* Makes the div span the full width of the screen */
+  padding: 10px;
+  background: var(--colour-dark);
+  height: 5rem;
+}
+
+.game_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .story {
   display: block; /* allow full width and wrapping */
   line-height: 1.75rem;
   white-space: pre-wrap;
+}
+
+.story_scroll {
+  position: fixed;
+  /* match the bottom of .title */
+  top: 5rem; /* tweak to your actual title height */
+
+  /* match the top of .bottom_bar */
+  bottom: 15rem; /* tweak to your actual bottom_bar height */
+
+  left: 1rem;
+  right: 1rem;
+
+  overflow-y: auto; /* this is where the scrollbar appears */
+  overscroll-behavior: contain;
+
+  padding: 1rem 1rem 2rem;
 }
 
 .score_panel {
@@ -31,10 +64,58 @@
 
 .game_btn {
   display: flex;
-
   flex-direction: row;
   text-align: center;
-
   gap: 1rem;
   margin-top: 1rem;
+}
+
+.bottom_bar {
+  position: fixed; /* Positions the div relative to the viewport */
+  bottom: 0; /* Aligns the bottom edge of the div with the bottom of the screen */
+  left: 0; /* Aligns the left edge with the left side of the screen */
+  width: 100%; /* Makes the div span the full width of the screen */
+  padding: 10px;
+  text-align: center;
+  /*   background: var(--colour-dark); */
+}
+
+.story_select_btns {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  font-size: var(--size-sm);
+}
+.footer__hr {
+  font-size: var(--size-xxs);
+  width: 100%;
+  border-top: 1px solid var(--clr-primary);
+  margin-bottom: 1rem;
+}
+
+.footer_description {
+  font-size: var(--size-sm);
+  max-width: 60ch;
+}
+
+.story_scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.story_scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+.story_scroll::-webkit-scrollbar-thumb {
+  background-color: var(--colour-slate50);
+  outline: 1px solid var(--colour-slate50);
 }

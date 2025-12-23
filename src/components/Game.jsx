@@ -221,92 +221,110 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   const buttonsEnabled = waitingForChoice && !!step;
 
   return (
-    <div className="container">
-      <h1>{story.title}</h1>
-      {/* story */}
-      <Typewriter
-        className="story"
-        text={storyText}
-        speed={speed}
-        paused={waitingForChoice}
-        onDone={onTypeDone}
-        resetSignal={resetSignal}
-      />
-      {/* story score */}
-      {showUnhinged && unhingedResult && (
-        <div className="score_panel">
-          <div>
-            <strong>Unhinged Heuristic Score:</strong> {unhingedResult.score}/10
-            — {unhingedResult.label}
-          </div>
+    <div className="game_container">
+      <div className="story_scroll">
+        <h1>{story.title}</h1>
+        {/* story */}
+        <Typewriter
+          className="story"
+          text={storyText}
+          speed={speed}
+          paused={waitingForChoice}
+          onDone={onTypeDone}
+          resetSignal={resetSignal}
+        />
+        {/* story score */}
+        {showUnhinged && unhingedResult && (
+          <div className="score_panel">
+            <div>
+              <strong>Unhinged Heuristic Score:</strong> {unhingedResult.score}
+              /10 — {unhingedResult.label}
+            </div>
 
-          {/* Optional debug info while you’re tuning */}
-          <div style={{ fontSize: 12, opacity: 0.8, marginTop: 6 }}>
-            wrongChoices: {unhingedResult.breakdown.wrongChoices} | weirdHits:{" "}
-            {unhingedResult.breakdown.weirdHits} | cozyHits:{" "}
-            {unhingedResult.breakdown.cozyHits} | selfAwareHits:{" "}
-            {unhingedResult.breakdown.selfAwareHits}
-          </div>
-          {nbResult && (
-            <div style={{ marginTop: 8 }}>
-              <div>
-                <strong>ML Naive Bayes Score:</strong> {nbResult.label} (p=
-                {nbResult.probs[nbResult.label].toFixed(2)})
-              </div>
-              <div style={{ fontSize: 12, opacity: 0.8, marginTop: 6 }}>
-                NB is a baseline trained on Stories 1–2 (so Story 3 vocabulary
-                may look “neutral”).
-              </div>
+            {/* Optional debug info while you’re tuning */}
+            <div style={{ fontSize: 12, opacity: 0.8, marginTop: 6 }}>
+              wrongChoices: {unhingedResult.breakdown.wrongChoices} | weirdHits:{" "}
+              {unhingedResult.breakdown.weirdHits} | cozyHits:{" "}
+              {unhingedResult.breakdown.cozyHits} | selfAwareHits:{" "}
+              {unhingedResult.breakdown.selfAwareHits}
             </div>
-          )}
+            {nbResult && (
+              <div style={{ marginTop: 8 }}>
+                <div>
+                  <strong>ML Naive Bayes Score:</strong> {nbResult.label} (p=
+                  {nbResult.probs[nbResult.label].toFixed(2)})
+                </div>
+                <div style={{ fontSize: 12, opacity: 0.8, marginTop: 6 }}>
+                  NB is a baseline trained on Stories 1–2 (so Story 3 vocabulary
+                  may look “neutral”).
+                </div>
+              </div>
+            )}
 
-          {nbResult && unhingedResult && (
-            <div style={{ marginTop: 4 }}>
-              {nbResult.label === unhingedResult.label
-                ? "Match ✅"
-                : "Mismatch ⚠️"}
-            </div>
-          )}
-          {nbResult && unhingedResult && (
-            <div style={{ marginTop: 8, fontStyle: "italic", opacity: 0.9 }}>
-              {compareCommentary(unhingedResult.label, nbResult.label)}
-            </div>
-          )}
+            {nbResult && unhingedResult && (
+              <div style={{ marginTop: 4 }}>
+                {nbResult.label === unhingedResult.label
+                  ? "Match ✅"
+                  : "Mismatch ⚠️"}
+              </div>
+            )}
+            {nbResult && unhingedResult && (
+              <div style={{ marginTop: 8, fontStyle: "italic", opacity: 0.9 }}>
+                {compareCommentary(unhingedResult.label, nbResult.label)}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* story choice buttons */}
+        <div className="game_btn">
+          {buttons.map((c) => (
+            <button
+              key={c.id}
+              className="btn"
+              disabled={!buttonsEnabled}
+              onClick={() => handleChoice(c.id)}
+            >
+              {c.label}
+            </button>
+          ))}
         </div>
-      )}
-      {/* story choice buttons */}
-      <div className="game_btn">
-        {buttons.map((c) => (
-          <button
-            key={c.id}
-            className="btn"
-            disabled={!buttonsEnabled}
-            onClick={() => handleChoice(c.id)}
-          >
-            {c.label}
+        {/* story restart button */}
+        <div style={{ marginTop: 12 }}>
+          <button className="btn" onClick={restart}>
+            restart
           </button>
-        ))}
-      </div>
-      {/* story restart button */}
-      <div style={{ marginTop: 12 }}>
-        <button className="btn" onClick={restart}>
-          restart
-        </button>
-      </div>
-      {/* story select buttons */}
-      <div className="game_btn">
-        <button className="btn btn-secondary" onClick={selectStory1}>
-          Story 1
-        </button>
-        <button className="btn btn-secondary" onClick={selectStory2}>
-          Story 2
-        </button>
-        <button className="btn btn-secondary" onClick={selectStory3}>
-          Story 3 🤖
-        </button>
-        <button className="btn btn-ghost" onClick={selectRandomStory}>
-          Random story 🎲
-        </button>
+        </div>
+        {/* footer and story select buttons */}
+        <div className="bottom_bar section">
+          <hr className="footer__hr" />
+          <div>
+            <p> Story Select </p>
+          </div>
+          <div className="game_btn story_select_btns">
+            <button className="btn btn-secondary" onClick={selectStory1}>
+              Story 1
+            </button>
+            <button className="btn btn-secondary" onClick={selectStory2}>
+              Story 2
+            </button>
+            <button className="btn btn-secondary" onClick={selectStory3}>
+              Story 3 🤖
+            </button>
+            <button className="btn btn-ghost" onClick={selectRandomStory}>
+              Random story 🎲
+            </button>
+          </div>
+          <section className="footer section">
+            <hr className="footer__hr" />
+
+            <p>Copyright © 2025 Saachi Sadcha - All Rights Reserved.</p>
+            <p>
+              All images, 3D models, and content are original and created by
+              Saachi Sadcha. Do not copy, download or sell.
+            </p>
+          </section>
+        </div>
       </div>
     </div>
   );
