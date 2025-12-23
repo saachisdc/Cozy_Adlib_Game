@@ -1,5 +1,11 @@
 // Game.jsx
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  useRef,
+} from "react";
 import Typewriter from "./Typewriter";
 
 import Story1BakedMittens from "./Story1BakedMittens";
@@ -69,6 +75,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   const [story, setStory] = useState(initialStory);
 
   const speed = story.speed ?? 40;
+  const storyScrollRef = useRef(null);
 
   // Full story string that the Typewriter reveals
   const [storyText, setStoryText] = useState(story.intro);
@@ -190,6 +197,47 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     [step, score, stepIndex, story]
   );
 
+  useEffect(() => {
+    const container = storyScrollRef.current;
+    if (!container) return;
+
+    // Only auto-scroll while text is actively typing:
+    // - not waiting for a choice
+    // - score panel not yet shown
+    const shouldAutoScroll = !waitingForChoice && !showUnhinged;
+    if (!shouldAutoScroll) return;
+
+    const intervalId = setInterval(() => {
+      const caret = container.querySelector(".caret");
+      if (!caret) return;
+
+      const caretTop = caret.offsetTop;
+      const viewportHeight = container.clientHeight;
+      const desiredTop = caretTop - viewportHeight * 0.35;
+      const currentTop = container.scrollTop;
+      const diff = desiredTop - currentTop;
+
+      if (Math.abs(diff) > 4) {
+        container.scrollTop = currentTop + diff * 0.2;
+      }
+    }, 50);
+
+    return () => clearInterval(intervalId);
+  }, [waitingForChoice, showUnhinged]);
+
+  useEffect(() => {
+    if (!showUnhinged) return;
+
+    const container = storyScrollRef.current;
+    if (!container) return;
+
+    // When the score panel appears, jump to the bottom once
+    container.scrollTo({
+      top: container.scrollHeight,
+      behavior: "smooth",
+    });
+  }, [showUnhinged]);
+
   const restart = useCallback(() => {
     setStoryText(story.intro);
     setStepIndex(0);
@@ -226,7 +274,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
       <h1 className="title">Cozy Madlib Game</h1>
 
       {/* Middle: the only scrollable area */}
-      <main className="story_scroll">
+      <main className="story_scroll" ref={storyScrollRef}>
         <h1>{story.title}</h1>
 
         <Typewriter
