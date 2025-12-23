@@ -11,7 +11,7 @@ import "/styles/utility.css";
 export default function StoryLayout() {
   return (
     <div className="container">
-      <h1 className="section title"> Cozy Adlib Game </h1>
+      <h1 className="section title"> Cozy Madlib Game </h1>
       <div className="section game">
         <Game />
       </div>

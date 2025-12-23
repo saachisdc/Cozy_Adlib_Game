@@ -134,7 +134,7 @@ export const Story2MagicalCampfire = {
   endings: {
     0: "Try as I might, I couldn’t do much but apologize for the chaos I had wrought upon the other campers. Not the most peaceful holiday trip, unfortunately.",
     1: "I did my best to ignore the chaos around me and refused to even make eye contact with any curious campers that happened to amble past. So all in all, a rather ridiculous holiday trip.",
-    2: "Once in a while another camper would amble past, undoubtedly to find the bathroom, but I was largely left alone to enjoy the rest of my slightly chaotic, but still cosy trip.",
+    2: "Once in a while another camper would amble past, undoubtedly to find the bathroom, but I was largely left alone to enjoy the rest of my slightly chaotic, but still cozy trip.",
     // 3 will default to the normal final 'after' text below if not provided.
   },
 
