@@ -39,15 +39,33 @@ The project is intentionally simple and designed as a learning exercise in inter
 ## Project Structure
 
 ```text
+scripts/
+simulated_runs/
 src/
-├── Game.jsx
-├── Typewriter.jsx
-├── Story1BakedMittens.jsx
-├── StoryLayout.jsx
+├── components/
+│   └── Game.jsx
+│   └── Typewriter.jsx
+│   └── Story1BakedMittens.js
+│   └── Story2MagicalCampfire.js
+│   └── Story3CrunchyVideoGame.js
+│   └── StoryLayout.jsx
+│   └── tmptestunhingedscore.js
+│   └── Typewriter.jsx
+│   └── UnhingedScore.js
+├── ml/
+│   └── nb.js
+├── models/
+│   └── nb_model.json
 ├── styles/
-│   └── game.css
+│   └── components/
+│       └── sectionfooter.css
+│       └── storylayout.css
+│   └── global.css
+│   └── modern-normalize.css
+│   └── utility.css
 └── App.jsx
 └── index.jsx
+└── index.html
 ```
 
 ---
