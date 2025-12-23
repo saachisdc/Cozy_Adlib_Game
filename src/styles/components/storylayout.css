@@ -1,39 +1,31 @@
 .title {
-  position: fixed; /* Positions the div relative to the viewport */
-  top: 0; /* Aligns the bottom edge of the div with the bottom of the screen */
-  left: 0; /* Aligns the left edge with the left side of the screen */
-  width: 100%; /* Makes the div span the full width of the screen */
-  padding: 10px;
+  flex-shrink: 0;
+  width: 100%;
+  padding: 10px 1rem;
   background: var(--colour-dark);
-  height: 5rem;
+  z-index: 1; /* optional, just in case */
+  font-size: var(--size-xl);
 }
 
 .game_container {
-  min-height: 100vh;
+  height: 100vh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
 }
 
 .story {
-  display: block; /* allow full width and wrapping */
+  display: block;
   line-height: 1.75rem;
   white-space: pre-wrap;
 }
 
 .story_scroll {
-  position: fixed;
-  /* match the bottom of .title */
-  top: 5rem; /* tweak to your actual title height */
-
-  /* match the top of .bottom_bar */
-  bottom: 15rem; /* tweak to your actual bottom_bar height */
-
-  left: 1rem;
-  right: 1rem;
-
+  flex: 1; /* fills space between title and bottom_bar */
+  min-height: 0; /* <-- IMPORTANT for flex + overflow on mobile */
   overflow-y: auto; /* this is where the scrollbar appears */
   overscroll-behavior: contain;
-
+  -webkit-overflow-scrolling: touch; /* smoother iOS scrolling */
   padding: 1rem 1rem 2rem;
 }
 
@@ -67,16 +59,26 @@
   flex-direction: row;
   text-align: center;
   gap: 1rem;
+  font-size: var(--size-xs);
+}
+
+.word_select_btns {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 0.5rem;
+  font-size: var(--size-sm);
 }
 
 .bottom_bar {
-  position: fixed; /* Positions the div relative to the viewport */
-  bottom: 0; /* Aligns the bottom edge of the div with the bottom of the screen */
-  left: 0; /* Aligns the left edge with the left side of the screen */
-  width: 100%; /* Makes the div span the full width of the screen */
-  padding: 10px;
+  flex-shrink: 0; /* stays “at the bottom” of the flex column */
+  width: 100%;
+  padding: 10px 1rem;
   text-align: center;
-  /*   background: var(--colour-dark); */
+  background: var(--colour-dark); /* optional but nice */
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .story_select_btns {
@@ -85,6 +87,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
+  font-size: var(--size-xs);
 }
 
 .footer {
@@ -92,7 +95,7 @@
   flex-direction: column;
   gap: 0.5rem;
   text-align: center;
-  font-size: var(--size-sm);
+  font-size: var(--size-xs);
 }
 .footer__hr {
   font-size: var(--size-xxs);

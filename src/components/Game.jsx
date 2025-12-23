@@ -222,9 +222,13 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
 
   return (
     <div className="game_container">
-      <div className="story_scroll">
+      {/* Top bar / app title */}
+      <h1 className="title">Cozy Madlib Game</h1>
+
+      {/* Middle: the only scrollable area */}
+      <main className="story_scroll">
         <h1>{story.title}</h1>
-        {/* story */}
+
         <Typewriter
           className="story"
           text={storyText}
@@ -275,56 +279,53 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             )}
           </div>
         )}
-
         {/* story choice buttons */}
-        <div className="game_btn">
+        <div className="word_select_btns">
           {buttons.map((c) => (
             <button
               key={c.id}
-              className="btn"
+              className="btn game_btn"
               disabled={!buttonsEnabled}
               onClick={() => handleChoice(c.id)}
             >
               {c.label}
             </button>
           ))}
-        </div>
-        {/* story restart button */}
-        <div style={{ marginTop: 12 }}>
-          <button className="btn" onClick={restart}>
+          {/* story restart button */}
+          <button className="btn game_btn" onClick={restart}>
             restart
           </button>
         </div>
-        {/* footer and story select buttons */}
-        <div className="bottom_bar section">
-          <hr className="footer__hr" />
-          <div>
-            <p> Story Select </p>
-          </div>
-          <div className="game_btn story_select_btns">
-            <button className="btn btn-secondary" onClick={selectStory1}>
-              Story 1
-            </button>
-            <button className="btn btn-secondary" onClick={selectStory2}>
-              Story 2
-            </button>
-            <button className="btn btn-secondary" onClick={selectStory3}>
-              Story 3 🤖
-            </button>
-            <button className="btn btn-ghost" onClick={selectRandomStory}>
-              Random story 🎲
-            </button>
-          </div>
-          <section className="footer section">
-            <hr className="footer__hr" />
-
-            <p>Copyright © 2025 Saachi Sadcha - All Rights Reserved.</p>
-            <p>
-              All images, 3D models, and content are original and created by
-              Saachi Sadcha. Do not copy, download or sell.
-            </p>
-          </section>
+      </main>
+      {/* footer and story select buttons */}
+      <div className="bottom_bar section">
+        <hr className="footer__hr" />
+        <div>
+          <p> Story Select </p>
         </div>
+        <div className="story_select_btns">
+          <button className="btn game_btn " onClick={selectStory1}>
+            Story 1
+          </button>
+          <button className="btn game_btn  " onClick={selectStory2}>
+            Story 2
+          </button>
+          <button className="btn game_btn " onClick={selectStory3}>
+            Story 3 🤖
+          </button>
+          <button className="btn game_btn " onClick={selectRandomStory}>
+            Random story 🎲
+          </button>
+        </div>
+        <section className="footer section">
+          <hr className="footer__hr" />
+
+          <p>Copyright © 2025 Saachi Sadcha - All Rights Reserved.</p>
+          <p>
+            All images, 3D models, and content are original and created by
+            Saachi Sadcha. Do not copy, download or sell.
+          </p>
+        </section>
       </div>
     </div>
   );

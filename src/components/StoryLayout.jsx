@@ -9,12 +9,5 @@ import "/styles/components/storylayout.css";
 import "/styles/utility.css";
 
 export default function StoryLayout() {
-  return (
-    <div className="container">
-      <h1 className="title"> Cozy Madlib Game </h1>
-      <div className="section game">
-        <Game />
-      </div>
-    </div>
-  );
+  return <Game />;
 }
