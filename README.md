@@ -40,7 +40,15 @@ The project is intentionally simple and designed as a learning exercise in inter
 
 ```text
 scripts/
+└── simulate_story_runs_with_nb.js
+└── simulate_story_runs.js
+└── train_nb.js
 simulated_runs/
+└── runs_story1_baked_mittens.csv
+└── runs_story2_magical_campfire_with_nb.csv
+└── runs_story2_magical_campfire.csv
+└── runs_story3_crunchy_video_game_with_nb.csv
+└── runs_story3_crunchy_video_game.csv
 src/
 ├── components/
 │   └── Game.jsx
