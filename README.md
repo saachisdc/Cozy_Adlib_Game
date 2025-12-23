@@ -1,4 +1,4 @@
-# Baked Mittens
+# Cozy Madlab Game
 
 A small, experimental mobile-friendly web game built with **React** that lets users build a short story by choosing icons at key moments.
 The project is intentionally simple and designed as a learning exercise in interactive storytelling, state management, and lightweight scoring logic.
@@ -10,19 +10,21 @@ The project is intentionally simple and designed as a learning exercise in inter
 - Learn React through a small, contained game
 - Experiment with interactive, branching narrative
 - Keep the app **static and easily shareable** (no backend required)
-- Explore beginner-friendly approaches to scoring and “ML-like” logic in JavaScript
-- Leave room to scale up with more stories later
+- Explore beginner-friendly approaches to heuristic scoring and “ML-like” logic in JavaScript
+- Create enough training data for ML - Naive Bayes model to also show ML score
 
 ---
 
 ## How the Game Works (High Level)
 
 1. A story is typed out using a typewriter effect.
-2. At certain points, the text pauses and shows a placeholder (`...choose an icon...`).
+2. At certain points, the text pauses and shows a placeholder (`...choose a button below...`).
 3. The user selects one of three icon-based choices.
-4. The placeholder is replaced with the chosen word, and the story continues based on that word.
+4. The placeholder is replaced with the chosen word, and the story continues based on that word using randomized branch inserts. For each story, there are 1,728 slightly different stories that can be generated.
 5. The game tracks which choices the user made.
 6. At the end, the story’s final line can change based on how many “correct” choices were made.
+7. For Story 1 and 2, the user receives a heuristic score based on the story generated, as well as a "wholesome", "kinda odd", and "totally unhinged" label
+8. For Story 3, in addition to the heuristic score and label, the user also gets a Naive Bayes score and commentary on whether the heuristic and NB score matched
 
 ---
 
