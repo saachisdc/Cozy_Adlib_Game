@@ -279,7 +279,14 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             )}
           </div>
         )}
+      </main>
+      {/* footer and story select buttons */}
+      <div className="bottom_bar section">
+        <hr className="footer__hr" />
         {/* story choice buttons */}
+        <div>
+          <p> Word Select </p>
+        </div>
         <div className="word_select_btns">
           {buttons.map((c) => (
             <button
@@ -296,10 +303,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             restart
           </button>
         </div>
-      </main>
-      {/* footer and story select buttons */}
-      <div className="bottom_bar section">
-        <hr className="footer__hr" />
+
         <div>
           <p> Story Select </p>
         </div>
