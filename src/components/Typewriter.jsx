@@ -8,6 +8,7 @@ export default function Typewriter({
   onDone,
   className = "",
   resetSignal = 0,
+  prefix = null,
 }) {
   const [visible, setVisible] = useState("");
   const lastLenRef = useRef(0);
@@ -64,6 +65,7 @@ export default function Typewriter({
 
   return (
     <div className={`story ${className}`}>
+      {prefix /* 👈 images go here */}
       {visible}
       <span className="caret" aria-hidden="true" />
     </div>

@@ -80,6 +80,9 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   // Full story string that the Typewriter reveals
   const [storyText, setStoryText] = useState(story.intro);
 
+  // For displaying choice images in text when buttons are chosen
+  const [choiceImages, setChoiceImages] = useState([]);
+
   // How many correct choices the user has made so far
   const [score, setScore] = useState(0);
 
@@ -108,6 +111,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setUnhingedResult(null);
     setShowUnhinged(false);
     setNbResult(null);
+    setChoiceImages([]);
   }, [story]);
 
   // Kick off first placeholder after intro finishes typing:
@@ -136,6 +140,22 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
 
       const choice = step.choices.find((c) => c.id === choiceId);
       const label = choice?.label ?? choiceId;
+
+      // 🔹 Add image instance if this choice has an image
+      if (choice?.image) {
+        setChoiceImages((prev) => {
+          const index = prev.length;
+          const align = index % 2 === 0 ? "left" : "right"; // alternate
+          return [
+            ...prev,
+            {
+              src: choice.image.src,
+              alt: choice.image.alt,
+              align,
+            },
+          ];
+        });
+      }
 
       const prefix = step.afterChoicePrefix ?? "";
       const branchInsert = pickRandom(step.branches?.[choiceId]);
@@ -247,6 +267,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setUnhingedResult(null);
     setShowUnhinged(false);
     setNbResult(null);
+    setChoiceImages([]);
   }, [story]);
 
   // Story selection helpers
@@ -276,15 +297,24 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
       {/* Middle: the only scrollable area */}
       <main className="story_scroll" ref={storyScrollRef}>
         <h1>{story.title}</h1>
-
-        <Typewriter
-          className="story"
-          text={storyText}
-          speed={speed}
-          paused={waitingForChoice}
-          onDone={onTypeDone}
-          resetSignal={resetSignal}
-        />
+        <div className="story_with_icons">
+          <Typewriter
+            text={storyText}
+            speed={speed}
+            paused={waitingForChoice}
+            onDone={onTypeDone}
+            resetSignal={resetSignal}
+            // 👇 inject the circles before the text
+            prefix={choiceImages.map((img, idx) => (
+              <span
+                key={idx}
+                className={`choice-circle choice-circle--${img.align}`}
+              >
+                <img src={img.src} alt={img.alt} />
+              </span>
+            ))}
+          />
+        </div>
         {/* story score */}
         {showUnhinged && unhingedResult && (
           <div className="score_panel">

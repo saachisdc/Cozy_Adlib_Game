@@ -21,8 +21,21 @@ export const Story1BakedMittens = {
       before: "",
 
       choices: [
-        { id: "coffee", label: "cup of coffee" },
-        { id: "mittens", label: "mittens" },
+        {
+          id: "coffee",
+          label: "cup of coffee",
+          image: {
+            src: "./images/circle.webp",
+            alt: "steaming mug",
+            width: "250",
+            height: "250",
+            loading: "lazy",
+          },
+        },
+        {
+          id: "mittens",
+          label: "mittens",
+        },
         { id: "donut", label: "donut" },
       ],
 
@@ -60,7 +73,17 @@ export const Story1BakedMittens = {
 
       choices: [
         { id: "coffee", label: "cup of coffee" },
-        { id: "mittens", label: "mittens" },
+        {
+          id: "mittens",
+          label: "mittens",
+          image: {
+            src: "./images/circle.webp",
+            alt: "steaming mug",
+            width: "250",
+            height: "250",
+            loading: "lazy",
+          },
+        },
         { id: "donut", label: "donut" },
       ],
 

@@ -27,7 +27,42 @@
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch; /* smoother iOS scrolling */
   padding: 1rem 1rem 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
+
+/* Base circle */
+.choice-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  shape-outside: circle();
+  -webkit-shape-outside: circle();
+
+  /* margin will be adjusted per side */
+}
+
+/* Left vs right, with slight off-screen crop */
+.choice-circle--left {
+  float: left;
+  margin: 0.5rem 0.75rem 0.75rem -3rem; /* negative left pushes it off-screen a bit */
+}
+
+.choice-circle--right {
+  float: right;
+  margin: 0.5rem -3rem 0.75rem 0.75rem; /* negative right pushes it off-screen a bit */
+}
+
+.choice-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* score panel shown at end of story */
 
 .score_panel {
   margin: 1rem 0;
