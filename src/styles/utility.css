@@ -9,8 +9,8 @@
 
 .btn {
   display: inline-block;
-  background-color: var(--colour-slate50);
-  color: var(--colour-dark);
+  background-color: var(--colour-primary);
+  color: var(--colour-background);
   padding: 0.5em 1em;
   font-weight: 500;
   border-radius: 6px;
@@ -20,11 +20,7 @@
 }
 
 .btn:hover {
-  background-color: var(--colour-slate100);
-}
-
-.btn:focus-visible {
-  outline: solid var(--colour-text);
+  background-color: var(--colour-text);
 }
 
 .section {

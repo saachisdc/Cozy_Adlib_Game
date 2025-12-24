@@ -54,6 +54,18 @@
   }
 }
 
+.bottom_bar {
+  flex-shrink: 0; /* stays “at the bottom” of the flex column */
+  width: 100%;
+  padding: 10px 1rem;
+  text-align: center;
+  justify-items: center;
+  background: var(--colour-dark); /* optional but nice */
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .game_btn {
   display: flex;
   flex-direction: row;
@@ -67,18 +79,8 @@
   flex-direction: row;
   text-align: center;
   gap: 0.5rem;
+  justify-content: center;
   font-size: var(--size-sm);
-}
-
-.bottom_bar {
-  flex-shrink: 0; /* stays “at the bottom” of the flex column */
-  width: 100%;
-  padding: 10px 1rem;
-  text-align: center;
-  background: var(--colour-dark); /* optional but nice */
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .story_select_btns {
@@ -100,7 +102,7 @@
 .footer__hr {
   font-size: var(--size-xxs);
   width: 100%;
-  border-top: 1px solid var(--clr-primary);
+  border-top: 0.5px solid var(--colour-secondary);
   margin-bottom: 1rem;
 }
 
@@ -118,6 +120,7 @@
 }
 
 .story_scroll::-webkit-scrollbar-thumb {
-  background-color: var(--colour-slate50);
-  outline: 1px solid var(--colour-slate50);
+  background-color: var(--colour-secondary);
+  outline: 1px solid var(--colour-seconday);
+  border-radius: 1rem;
 }
