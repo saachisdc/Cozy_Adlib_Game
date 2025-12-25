@@ -77,6 +77,12 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   const speed = story.speed ?? 40;
   const storyScrollRef = useRef(null);
 
+  // ...your existing state
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
+  const toggleMenu = useCallback(() => setMenuOpen((v) => !v), []);
+
   // Full story string that the Typewriter reveals
   const [storyText, setStoryText] = useState(story.intro);
 
@@ -270,13 +276,23 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setChoiceImages([]);
   }, [story]);
 
-  // Story selection helpers
-  const selectStory1 = () => setStory(Story1BakedMittens);
-  const selectStory2 = () => setStory(Story2MagicalCampfire);
-  const selectStory3 = () => setStory(Story3CrunchyVideoGame);
+  // Story selection helpers and close menu when switching stories on mobile
+  const selectStory1 = () => {
+    setStory(Story1BakedMittens);
+    closeMenu();
+  };
+  const selectStory2 = () => {
+    setStory(Story2MagicalCampfire);
+    closeMenu();
+  };
+  const selectStory3 = () => {
+    setStory(Story3CrunchyVideoGame);
+    closeMenu();
+  };
   const selectRandomStory = () => {
     const idx = Math.floor(Math.random() * STORIES.length);
     setStory(STORIES[idx]);
+    closeMenu();
   };
 
   // Buttons should always be visible:
@@ -291,8 +307,67 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
 
   return (
     <div className="game_container">
-      {/* Top bar / app title */}
-      <h1 className="title">Cozy Madlib Game</h1>
+      {/* Top bar */}
+      <header className="top_bar">
+        <h1 className="title">Cozy Madlib Game</h1>
+
+        <button
+          className="menu_btn btn"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded={menuOpen}
+          onClick={toggleMenu}
+        >
+          ☰
+        </button>
+      </header>
+
+      {/* Drawer overlay */}
+      <div
+        className={`menu_overlay ${menuOpen ? "is-open" : ""}`}
+        onClick={closeMenu}
+      />
+
+      {/* Drawer */}
+      <aside className={`menu_drawer ${menuOpen ? "is-open" : ""}`}>
+        <div className="menu_header">
+          <strong>Menu</strong>
+          <button
+            className="btn menu_close"
+            onClick={closeMenu}
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div className="menu_section">
+          <p>Story Select</p>
+          <div className="story_select_btns">
+            <button className="btn game_btn" onClick={selectStory1}>
+              Story 1
+            </button>
+            <button className="btn game_btn" onClick={selectStory2}>
+              Story 2
+            </button>
+            <button className="btn game_btn" onClick={selectStory3}>
+              Story 3 🤖
+            </button>
+            <button className="btn game_btn" onClick={selectRandomStory}>
+              Random story 🎲
+            </button>
+          </div>
+        </div>
+
+        <section className="footer section">
+          <hr className="footer__hr" />
+          <p>Copyright © 2025 Saachi Sadcha - All Rights Reserved.</p>
+          <p>
+            All images, 3D models, and content are original and created by
+            Saachi Sadcha. Do not copy, download or sell.
+          </p>
+        </section>
+      </aside>
 
       {/* Middle: the only scrollable area */}
       <main className="story_scroll" ref={storyScrollRef}>
@@ -358,13 +433,10 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           </div>
         )}
       </main>
-      {/* footer and story select buttons */}
+      {/* footer and word choice buttons */}
       <div className="bottom_bar section">
         <hr className="footer__hr" />
-        {/* story choice buttons */}
-        <div>
-          <p> Word Select </p>
-        </div>
+
         <div className="word_select_btns">
           {buttons.map((c) => (
             <button
@@ -381,33 +453,6 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             restart
           </button>
         </div>
-
-        <div>
-          <p> Story Select </p>
-        </div>
-        <div className="story_select_btns">
-          <button className="btn game_btn " onClick={selectStory1}>
-            Story 1
-          </button>
-          <button className="btn game_btn  " onClick={selectStory2}>
-            Story 2
-          </button>
-          <button className="btn game_btn " onClick={selectStory3}>
-            Story 3 🤖
-          </button>
-          <button className="btn game_btn " onClick={selectRandomStory}>
-            Random story 🎲
-          </button>
-        </div>
-        <section className="footer section">
-          <hr className="footer__hr" />
-
-          <p>Copyright © 2025 Saachi Sadcha - All Rights Reserved.</p>
-          <p>
-            All images, 3D models, and content are original and created by
-            Saachi Sadcha. Do not copy, download or sell.
-          </p>
-        </section>
       </div>
     </div>
   );

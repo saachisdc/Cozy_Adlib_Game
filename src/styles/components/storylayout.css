@@ -1,11 +1,112 @@
-.title {
+/* Top bar now needs to hold title + hamburger */
+.top_bar {
   flex-shrink: 0;
   width: 100%;
   padding: 10px 1rem;
   background: var(--colour-dark);
-  z-index: 1; /* optional, just in case */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  z-index: 5;
+}
+
+/* Keep your existing .title styles, but remove padding/bg if you want top_bar to own it */
+.title {
+  flex: 1;
+  padding: 0; /* optional */
+  background: none; /* optional */
+  margin: 0;
   font-size: var(--size-xl);
 }
+
+/* Hamburger button */
+.menu_btn {
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Overlay behind the drawer */
+.menu_overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+  z-index: 20;
+}
+
+.menu_overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Slide-in drawer */
+.menu_drawer {
+  position: fixed;
+  top: 0;
+  right: 0; /* right-side drawer (feels nice for thumb on phones) */
+  height: 100vh;
+  height: 100svh;
+  width: min(340px, 86vw);
+  background: var(--colour-background);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  transform: translateX(100%);
+  transition: transform 220ms ease;
+  z-index: 30;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu_drawer.is-open {
+  transform: translateX(0);
+}
+
+.menu_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.menu_close {
+  padding: 0.4rem 0.6rem;
+  line-height: 1;
+}
+
+.menu_section {
+  margin-bottom: 1rem;
+}
+
+/* Make story buttons feel better in a drawer */
+.menu_drawer .story_select_btns {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.menu_drawer .game_btn {
+  justify-content: center;
+}
+
+/* Reduce motion friendly */
+@media (prefers-reduced-motion: reduce) {
+  .menu_drawer,
+  .menu_overlay {
+    transition: none;
+  }
+}
+
+/* story layout */
 
 .game_container {
   height: 100vh;
