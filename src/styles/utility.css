@@ -64,7 +64,7 @@
     max-width: 1280px;
   }
   .btn {
-    font-size: var(--size-base);
+    font-size: var(--size-xl);
   }
 }
 /* 2xl */

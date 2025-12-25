@@ -420,7 +420,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
         )}
       </main>
       {/* footer and word choice buttons */}
-      <div className="bottom_bar section">
+      <div className="bottom_bar">
         <p>Word Select</p>
         <div className="word_select_btns">
           {buttons.map((c) => (
