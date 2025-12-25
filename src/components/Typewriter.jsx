@@ -1,5 +1,52 @@
 // Typewriter.jsx
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
+
+const IMG_TOKEN_RE = /\[\[IMG:([a-zA-Z0-9_-]+):(left|right)\]\]/g;
+
+function renderWithImages(text, imageMap) {
+  const parts = [];
+  let lastIdx = 0;
+  let match;
+
+  while ((match = IMG_TOKEN_RE.exec(text)) !== null) {
+    const [token, id, align] = match;
+    const start = match.index;
+
+    // text before token
+    if (start > lastIdx) {
+      parts.push(text.slice(lastIdx, start));
+    }
+
+    const img = imageMap?.[id];
+    if (img) {
+      parts.push(
+        <span key={`${id}-${start}`} className="choice-wrap">
+          <span className={`choice-circle choice-circle--${align}`}>
+            <img
+              src={img.src}
+              alt={img.alt}
+              width={img.width}
+              height={img.height}
+              loading={img.loading || "lazy"}
+            />
+          </span>
+        </span>
+      );
+    } else {
+      // if missing, just render token as text so you can debug
+      //parts.push(token);
+    }
+
+    lastIdx = start + token.length;
+  }
+
+  // remaining tail text
+  if (lastIdx < text.length) {
+    parts.push(text.slice(lastIdx));
+  }
+
+  return parts;
+}
 
 export default function Typewriter({
   text = "",
@@ -8,7 +55,8 @@ export default function Typewriter({
   onDone,
   className = "",
   resetSignal = 0,
-  prefix = null,
+  // prefix = null,
+  imageMap = {},
 }) {
   const [visible, setVisible] = useState("");
   const lastLenRef = useRef(0);
@@ -63,10 +111,14 @@ export default function Typewriter({
     return () => clearInterval(id);
   }, [text, speed, paused, onDone]);
 
+  const rendered = useMemo(
+    () => renderWithImages(visible, imageMap),
+    [visible, imageMap]
+  );
+
   return (
     <div className={`story ${className}`}>
-      {prefix /* 👈 images go here */}
-      {visible}
+      {rendered}
       <span className="caret" aria-hidden="true" />
     </div>
   );

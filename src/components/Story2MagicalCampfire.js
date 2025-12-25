@@ -1,8 +1,33 @@
 // Story2MagicalCampfire.jsx
+const IMAGES = {
+  book: {
+    src: "./images/circle.webp",
+    alt: "stack of books",
+    width: 250,
+    height: 250,
+    loading: "lazy",
+  },
+  dog: {
+    src: "./images/circle.webp",
+    alt: "small dog",
+    width: 250,
+    height: 250,
+    loading: "lazy",
+  },
+  campfire: {
+    src: "./images/circle.webp",
+    alt: "campfire",
+    width: 250,
+    height: 250,
+    loading: "lazy",
+  },
+};
+
 export const Story2MagicalCampfire = {
   id: "story2_magical_campfire",
   title: "Magical Campfire",
   speed: 40,
+  images: IMAGES,
 
   intro:
     "My little camper van was settled into a snug little corner of the park. A comfortably warm draft of air was melting pockets of crisp snow. Sunlight sparkled off frost-tipped dead grass. From the back of the van, I grabbed a small  ",

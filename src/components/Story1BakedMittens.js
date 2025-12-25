@@ -28,6 +28,7 @@ export const Story1BakedMittens = {
   id: "story1_baked_mittens",
   title: "Baked Mittens",
   speed: 40,
+  images: IMAGES,
 
   intro:
     "White flakes swirled around in the landscape behind me, accumulating in the corners of the bakery window, as I ordered a hot ",

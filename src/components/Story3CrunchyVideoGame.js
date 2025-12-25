@@ -3,6 +3,7 @@ export const Story3CrunchyVideoGame = {
   id: "story3_crunchy_video_game",
   title: "Crunchy Video Game",
   speed: 40,
+  // images: IMAGES,
 
   intro:
     "A storm beat furious rain and lightening against my tall windows, but from inside my safe, dry apartment, I paid it no mind. I had just settled my sore limbs into my favourite ",

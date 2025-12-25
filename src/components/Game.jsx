@@ -87,7 +87,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   const [storyText, setStoryText] = useState(story.intro);
 
   // For displaying choice images in text when buttons are chosen
-  const [choiceImages, setChoiceImages] = useState([]);
+  //const [choiceImages, setChoiceImages] = useState([]);
 
   // How many correct choices the user has made so far
   const [score, setScore] = useState(0);
@@ -117,7 +117,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setUnhingedResult(null);
     setShowUnhinged(false);
     setNbResult(null);
-    setChoiceImages([]);
+    // setChoiceImages([]);
   }, [story]);
 
   // Kick off first placeholder after intro finishes typing:
@@ -147,32 +147,24 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
       const choice = step.choices.find((c) => c.id === choiceId);
       const label = choice?.label ?? choiceId;
 
-      // 🔹 Add image instance if this choice has an image
-      if (choice?.image) {
-        setChoiceImages((prev) => {
-          const index = prev.length;
-          const align = index % 2 === 0 ? "left" : "right"; // alternate
-          return [
-            ...prev,
-            {
-              src: choice.image.src,
-              alt: choice.image.alt,
-              align,
-            },
-          ];
-        });
+      function imgToken(id, align) {
+        return `\n\n[[IMG:${id}:${align}]]\n\n`;
       }
+
+      // Decide where the image should go for THIS choice
+      // (alternate left/right by step index — simple + stable)
+      const align = stepIndex % 2 === 0 ? "left" : "right";
+
+      // Only insert an image token if this choice has an image
+      const imgInsert = choice?.image ? imgToken(choiceId, align) : "";
 
       const prefix = step.afterChoicePrefix ?? "";
       const branchInsert = pickRandom(step.branches?.[choiceId]);
       const after = step.after ?? "";
 
-      // Determine correctness for this step
       const wasCorrect = !!step.correct && step.correct === choiceId;
       const newScore = score + (wasCorrect ? 1 : 0);
 
-      // 1) Replace the last placeholder with the chosen label
-      // 2) Append the branch text and the after-text (or per-story ending)
       const isLast = stepIndex === (story.steps?.length ?? 0) - 1;
       const total = story.steps?.length ?? 0;
 
@@ -187,19 +179,18 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             "The night settled around me, and I let myself breathe it in.";
 
           const finalText =
-            replaced + prefix + branchInsert + " " + chosenEnding;
+            replaced + prefix + imgInsert + branchInsert + " " + chosenEnding;
 
-          // ✅ compute score ONLY here (last step only)
           const result = computeUnhingedScore({
             storyText: finalText,
             correctCount: newScore,
             totalSteps: total,
             modelConfig: story.unhingedModel,
           });
+
           setShowUnhinged(false);
           setUnhingedResult(result);
 
-          // for Story 3 only: run NB vibe predictor
           const nb =
             story.id === "story3_crunchy_video_game"
               ? predictVibe(finalText, nbModel)
@@ -212,10 +203,9 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           );
         }
 
-        return replaced + prefix + branchInsert + after;
+        return replaced + prefix + imgInsert + branchInsert + after;
       });
 
-      // Resume typing + advance to next step.
       setWaitingForChoice(false);
       setStepIndex((i) => i + 1);
       setScore(newScore);
@@ -273,7 +263,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setUnhingedResult(null);
     setShowUnhinged(false);
     setNbResult(null);
-    setChoiceImages([]);
+    //setChoiceImages([]);
   }, [story]);
 
   // Story selection helpers and close menu when switching stories on mobile
@@ -380,14 +370,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             onDone={onTypeDone}
             resetSignal={resetSignal}
             // 👇 inject the circles before the text
-            prefix={choiceImages.map((img, idx) => (
-              <span
-                key={idx}
-                className={`choice-circle choice-circle--${img.align}`}
-              >
-                <img src={img.src} alt={img.alt} />
-              </span>
-            ))}
+            imageMap={story.images}
           />
         </div>
         {/* story score */}
