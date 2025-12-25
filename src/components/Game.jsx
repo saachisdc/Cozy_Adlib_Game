@@ -302,7 +302,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
         <h1 className="title">Cozy Madlib Game</h1>
 
         <button
-          className="menu_btn btn"
+          className="btn menu_btn"
           type="button"
           aria-label="Open menu"
           aria-expanded={menuOpen}
@@ -349,14 +349,13 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           </div>
         </div>
 
-        <section className="footer section">
-          <hr className="footer__hr" />
+        <div className="footer  menu_section__spaced">
           <p>Copyright © 2025 Saachi Sadcha - All Rights Reserved.</p>
           <p>
             All images, 3D models, and content are original and created by
             Saachi Sadcha. Do not copy, download or sell.
           </p>
-        </section>
+        </div>
       </aside>
 
       {/* Middle: the only scrollable area */}
@@ -377,24 +376,28 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
         {showUnhinged && unhingedResult && (
           <div className="score_panel">
             <div>
-              <strong>Unhinged Heuristic Score:</strong> {unhingedResult.score}
-              /10 — {unhingedResult.label}
+              <strong>Unhinged Heuristic Score:</strong>{" "}
+              <div>
+                {unhingedResult.score}
+                /10 — {unhingedResult.label}
+              </div>
             </div>
 
             {/* Optional debug info while you’re tuning */}
-            <div style={{ fontSize: 12, opacity: 0.8, marginTop: 6 }}>
+            <div className="score_panel_breakdown">
               wrongChoices: {unhingedResult.breakdown.wrongChoices} | weirdHits:{" "}
               {unhingedResult.breakdown.weirdHits} | cozyHits:{" "}
               {unhingedResult.breakdown.cozyHits} | selfAwareHits:{" "}
               {unhingedResult.breakdown.selfAwareHits}
             </div>
             {nbResult && (
-              <div style={{ marginTop: 8 }}>
+              <div>
+                <strong>ML Naive Bayes Score:</strong>{" "}
                 <div>
-                  <strong>ML Naive Bayes Score:</strong> {nbResult.label} (p=
+                  {nbResult.label} (p=
                   {nbResult.probs[nbResult.label].toFixed(2)})
                 </div>
-                <div style={{ fontSize: 12, opacity: 0.8, marginTop: 6 }}>
+                <div className="score_panel_breakdown">
                   NB is a baseline trained on Stories 1–2 (so Story 3 vocabulary
                   may look “neutral”).
                 </div>
@@ -409,7 +412,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
               </div>
             )}
             {nbResult && unhingedResult && (
-              <div style={{ marginTop: 8, fontStyle: "italic", opacity: 0.9 }}>
+              <div className="score_panel_breakdown score_panel_breakdown--italic">
                 {compareCommentary(unhingedResult.label, nbResult.label)}
               </div>
             )}
@@ -418,8 +421,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
       </main>
       {/* footer and word choice buttons */}
       <div className="bottom_bar section">
-        <hr className="footer__hr" />
-
+        <p>Word Select</p>
         <div className="word_select_btns">
           {buttons.map((c) => (
             <button

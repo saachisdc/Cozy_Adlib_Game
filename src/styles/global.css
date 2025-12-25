@@ -6,7 +6,7 @@
   --font-secondary: "Open Sans", sans-serif;
 
   /* default light colours */
-  --colour-background: #f9fbf9;
+  --colour-background: rgb(249, 251, 249);
   --colour-text: #202d40;
   --colour-primary: #224e5d;
   --colour-secondary: #85cde5;

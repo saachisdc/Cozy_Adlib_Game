@@ -8,14 +8,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  z-index: 5;
+  z-index: 10;
 }
 
 /* Keep your existing .title styles, but remove padding/bg if you want top_bar to own it */
 .title {
   flex: 1;
-  padding: 0; /* optional */
-  background: none; /* optional */
   margin: 0;
   font-size: var(--size-xl);
 }
@@ -23,12 +21,13 @@
 /* Hamburger button */
 .menu_btn {
   flex: 0 0 auto;
-  font-size: 1.25rem;
   line-height: 1;
   padding: 0.5rem 0.75rem;
 }
 
-/* Overlay behind the drawer */
+/* Menu */
+
+/* Menu Overlay behind the drawer */
 .menu_overlay {
   position: fixed;
   inset: 0;
@@ -44,7 +43,7 @@
   pointer-events: auto;
 }
 
-/* Slide-in drawer */
+/* Menu Slide-in drawer */
 .menu_drawer {
   position: fixed;
   top: 0;
@@ -57,7 +56,6 @@
   transform: translateX(100%);
   transition: transform 220ms ease;
   z-index: 30;
-
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -75,6 +73,7 @@
   justify-content: space-between;
   gap: 0.75rem;
   margin-bottom: 1rem;
+  font-size: var(--size-lg);
 }
 
 .menu_close {
@@ -84,6 +83,13 @@
 
 .menu_section {
   margin-bottom: 1rem;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_section__spaced {
+  margin-top: auto;
 }
 
 /* Make story buttons feel better in a drawer */
@@ -106,6 +112,52 @@
   }
 }
 
+.story_select_btns {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  font-size: var(--size-xs);
+}
+.footer__hr {
+  width: 100%;
+  border-top: 0.5px solid var(--colour-secondary);
+  margin-bottom: 1rem;
+}
+
+.footer_description {
+  max-width: 60ch;
+}
+
+/* Caret element appended by the Typewriter component. */
+.caret {
+  display: inline-block;
+  width: 0.12rem;
+  height: 1rem;
+  margin-left: 0.15em;
+  background: currentColor;
+  vertical-align: text-bottom;
+  animation: blink-caret 0.9s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 /* story layout */
 
 .game_container {
@@ -113,6 +165,7 @@
   height: 100svh;
   display: flex;
   flex-direction: column;
+  font-size: var(--size-sm);
 }
 
 .story {
@@ -140,8 +193,8 @@
 
 /* Base circle */
 .choice-circle {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
 
@@ -178,27 +231,17 @@
 
 .score_panel {
   margin: 1rem 0;
+  gap: var(--size-xxs);
+  display: flex;
+  flex-direction: column;
 }
 
-/* Caret element appended by the Typewriter component. */
-.caret {
-  display: inline-block;
-  width: 0.12rem;
-  height: 1rem;
-  margin-left: 0.15em;
-  background: currentColor;
-  vertical-align: text-bottom;
-  animation: blink-caret 0.9s step-end infinite;
+.score_panel_breakdown {
+  font-size: var(--size-xs);
 }
-
-@keyframes blink-caret {
-  from,
-  to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
+.score_panel_breakdown--italic {
+  margin-top: var(--size-xxs);
+  font-style: italic;
 }
 
 .bottom_bar {
@@ -211,6 +254,7 @@
   gap: 1rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .game_btn {
@@ -230,34 +274,6 @@
   font-size: var(--size-sm);
 }
 
-.story_select_btns {
-  flex-shrink: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  font-size: var(--size-xs);
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  text-align: center;
-  font-size: var(--size-xs);
-}
-.footer__hr {
-  font-size: var(--size-xxs);
-  width: 100%;
-  border-top: 0.5px solid var(--colour-secondary);
-  margin-bottom: 1rem;
-}
-
-.footer_description {
-  font-size: var(--size-sm);
-  max-width: 60ch;
-}
-
 .story_scroll::-webkit-scrollbar {
   width: 8px;
 }
@@ -270,4 +286,100 @@
   background-color: var(--colour-secondary);
   outline: 1px solid var(--colour-seconday);
   border-radius: 1rem;
+}
+
+/* xs */
+@media (min-width: 475px) {
+}
+/* sm */
+@media (min-width: 640px) {
+}
+/* md */
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--size-2xl);
+  }
+  .menu_header {
+    font-size: var(--size-xl);
+  }
+  .footer {
+    font-size: var(--size-sm);
+  }
+  .game_container {
+    font-size: var(--size-base);
+  }
+  .choice-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .score_panel_breakdown {
+    font-size: var(--size-sm);
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  /* hide mobile-only controls */
+  .menu_btn,
+  .menu_overlay {
+    display: none !important;
+  }
+
+  /* turn the drawer into a permanent right sidebar */
+  .menu_drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 340px; /* pick a sidebar width you like */
+    transform: none !important; /* ignore slide-in/out */
+    z-index: 5; /* below top bar if needed */
+  }
+
+  /* optional: you probably don't need a close button on desktop */
+  .menu_header {
+    display: none;
+  }
+
+  /* make room for the sidebar so story doesn't go underneath it */
+  .story_scroll {
+    margin-right: 340px; /* must match .menu_drawer width */
+    max-width: 80ch;
+  }
+
+  /* if your bottom bar is fixed-width full screen, also make room */
+  .bottom_bar {
+    margin-right: 340px; /* optional; remove if you want it full width */
+  }
+
+  /* if the top bar spans full width, keep it full width (or also inset) */
+  /* .top_bar { margin-right: 340px; }  */ /* optional */
+
+  .title {
+    font-size: var(--size-3xl);
+  }
+  .menu_header {
+    font-size: var(--size-2xl);
+  }
+  .footer {
+    font-size: var(--size-sm);
+  }
+  .game_container {
+    font-size: var(--size-xl);
+  }
+  .choice-circle {
+    width: 400px;
+    height: 400px;
+  }
+
+  .score_panel_breakdown {
+    font-size: var(--size-base);
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+}
+/* 2xl */
+@media (min-width: 1536px) {
 }

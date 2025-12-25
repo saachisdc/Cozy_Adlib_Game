@@ -46,9 +46,9 @@ export const Story2MagicalCampfire = {
       before: "",
 
       choices: [
-        { id: "book", label: "stack of books" },
-        { id: "dog", label: "dog" },
-        { id: "campfire", label: "campfire" },
+        { id: "book", label: "stack of books", image: IMAGES.book },
+        { id: "dog", label: "dog", image: IMAGES.dog },
+        { id: "campfire", label: "campfire", image: IMAGES.campfire },
       ],
 
       afterChoicePrefix: "  from the shelf on top of my fold out bed",
@@ -85,9 +85,9 @@ export const Story2MagicalCampfire = {
       before: "",
 
       choices: [
-        { id: "book", label: "stack of books" },
-        { id: "dog", label: "dog" },
-        { id: "campfire", label: "campfire" },
+        { id: "book", label: "stack of books", image: IMAGES.book },
+        { id: "dog", label: "dog", image: IMAGES.dog },
+        { id: "campfire", label: "campfire", image: IMAGES.campfire },
       ],
       afterChoicePrefix: ". ",
 
@@ -123,9 +123,9 @@ export const Story2MagicalCampfire = {
       before: "",
 
       choices: [
-        { id: "book", label: "stack of books" },
-        { id: "dog", label: "dog" },
-        { id: "campfire", label: "campfire" },
+        { id: "book", label: "stack of books", image: IMAGES.book },
+        { id: "dog", label: "dog", image: IMAGES.dog },
+        { id: "campfire", label: "campfire", image: IMAGES.campfire },
       ],
       afterChoicePrefix: "",
 
