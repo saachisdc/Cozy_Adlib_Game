@@ -1,9 +1,33 @@
 // Story3CrunchyVideoGame.jsx
+
+const IMAGES = {
+  armchair: {
+    src: "./images/Story3armchair.webp",
+    alt: "armchair with cushion",
+    width: 250,
+    height: 250,
+    loading: "lazy",
+  },
+  videogame: {
+    src: "./images/Story3videogame.webp",
+    alt: "video game controller",
+    width: 250,
+    height: 250,
+    loading: "lazy",
+  },
+  cookie: {
+    src: "./images/Story3cookies.webp",
+    alt: "stack of chocolate chip cookies",
+    width: 250,
+    height: 250,
+    loading: "lazy",
+  },
+};
 export const Story3CrunchyVideoGame = {
   id: "story3_crunchy_video_game",
   title: "Crunchy Video Game",
   speed: 40,
-  // images: IMAGES,
+  images: IMAGES,
 
   intro:
     "A storm beat furious rain and lightening against my tall windows, but from inside my safe, dry apartment, I paid it no mind. I had just settled my sore limbs into my favourite ",
@@ -22,9 +46,9 @@ export const Story3CrunchyVideoGame = {
       before: "",
 
       choices: [
-        { id: "armchair", label: "armchair" },
-        { id: "videogame", label: "video game" },
-        { id: "cookie", label: "chocolate chip cookie" },
+        { id: "armchair", label: "armchair", image: IMAGES.armchair },
+        { id: "videogame", label: "video game", image: IMAGES.videogame },
+        { id: "cookie", label: "chocolate chip cookie", image: IMAGES.cookie },
       ],
 
       afterChoicePrefix: "; ",
@@ -61,15 +85,15 @@ export const Story3CrunchyVideoGame = {
       before: "",
 
       choices: [
-        { id: "armchair", label: "armchair" },
-        { id: "videogame", label: "video game" },
-        { id: "cookie", label: "chocolate chip cookie" },
+        { id: "armchair", label: "armchair", image: IMAGES.armchair },
+        { id: "videogame", label: "video game", image: IMAGES.videogame },
+        { id: "cookie", label: "chocolate chip cookie", image: IMAGES.cookie },
       ],
       afterChoicePrefix: ", ",
 
       branches: {
         videogame: [
-          "a delightful farming simulation that takes place in some far away asteroid field. As I attempted to protect my lettuce from giant space slugs with one hand clutching my console, ",
+          "a delightful farming simulation that takes place in some far away asteroid field.",
           "a cozy city-building game where nothing bad ever happens. I lost track of time rearranging digital park benches while the storm raged on unnoticed. ",
           "a low-stakes exploration game that rewarded curiosity over speed. I leaned forward, fully absorbed, as my character wandered across softly glowing terrain. ",
           "a charming puzzle adventure with cheerful sound effects that harmonized pleasantly with the rumbling thunder outside. I smiled despite myself and kept playing. ",
@@ -98,9 +122,9 @@ export const Story3CrunchyVideoGame = {
       before: "",
 
       choices: [
-        { id: "armchair", label: "armchair" },
-        { id: "videogame", label: "video game" },
-        { id: "cookie", label: "chocolate chip cookie" },
+        { id: "armchair", label: "armchair", image: IMAGES.armchair },
+        { id: "videogame", label: "video game", image: IMAGES.videogame },
+        { id: "cookie", label: "chocolate chip cookie", image: IMAGES.cookie },
       ],
       afterChoicePrefix: "s with a free hand. ",
 

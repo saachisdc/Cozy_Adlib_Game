@@ -1,22 +1,22 @@
 // Story2MagicalCampfire.jsx
 const IMAGES = {
   book: {
-    src: "./images/circle.webp",
+    src: "./images/Story2books.webp",
     alt: "stack of books",
     width: 250,
     height: 250,
     loading: "lazy",
   },
   dog: {
-    src: "./images/circle.webp",
-    alt: "small dog",
+    src: "./images/Story2dog.webp",
+    alt: "dog wearing a coat, with a ball",
     width: 250,
     height: 250,
     loading: "lazy",
   },
   campfire: {
-    src: "./images/circle.webp",
-    alt: "campfire",
+    src: "./images/Story2campfire.webp",
+    alt: "campfire in a ring of stones",
     width: 250,
     height: 250,
     loading: "lazy",

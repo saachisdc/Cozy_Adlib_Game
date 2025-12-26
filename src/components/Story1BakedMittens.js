@@ -2,21 +2,21 @@
 
 const IMAGES = {
   coffee: {
-    src: "./images/circle.webp",
+    src: "./images/Story1coffee.webp",
     alt: "steaming mug",
     width: 250,
     height: 250,
     loading: "lazy",
   },
   mittens: {
-    src: "./images/circle.webp",
+    src: "./images/Story1mittens.webp",
     alt: "wool mittens",
     width: 250,
     height: 250,
     loading: "lazy",
   },
   donut: {
-    src: "./images/circle.webp",
+    src: "./images/Story1donut.webp",
     alt: "glazed donut",
     width: 250,
     height: 250,
