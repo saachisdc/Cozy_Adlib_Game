@@ -7,11 +7,11 @@ The project is intentionally simple and designed as a learning exercise in inter
 
 ## Project Goals
 
-- Learn React through a small, contained game
+- Create a small, contained game using ReactJS and native Javascript
 - Experiment with interactive, branching narrative
-- Keep the app **static and easily shareable** (no backend required)
-- Explore beginner-friendly approaches to heuristic scoring and “ML-like” logic in JavaScript
-- Create enough training data for ML - Naive Bayes model to also show ML score
+- Keep the app **static and easily shareable** (no backend required, no saved data, no 3D models)
+- Explore beginner-friendly approaches to heuristic scoring and machine learning logic in JavaScript
+- Create enough training data from Stories 1 and 2 for ML - Naive Bayes model to also show ML score based on offline training for Story 3
 
 ---
 
@@ -20,11 +20,13 @@ The project is intentionally simple and designed as a learning exercise in inter
 1. A story is typed out using a typewriter effect.
 2. At certain points, the text pauses and shows a placeholder (`...choose a button below...`).
 3. The user selects one of three icon-based choices.
-4. The placeholder is replaced with the chosen word, and the story continues based on that word using randomized branch inserts. For each story, there are 1,728 slightly different stories that can be generated.
-5. The game tracks which choices the user made.
-6. At the end, the story’s final line can change based on how many “correct” choices were made.
-7. For Story 1 and 2, the user receives a heuristic score based on the story generated, as well as a "wholesome", "kinda odd", and "totally unhinged" label
-8. For Story 3, in addition to the heuristic score and label, the user also gets a Naive Bayes score and commentary on whether the heuristic and NB score matched
+4. The placeholder is replaced with the chosen word, and the story continues based on that word using randomized branch inserts.
+5. For each word selected, an image shows up on the left or right of the screen near the chosen word.
+6. For each story, there are 1,728 slightly different stories that can be generated.
+7. At the end, the story’s final line can change based on how many “correct” choices were made.
+8. The game tracks which choices the user made, and a model checks if the branches created included "wholesome", "kinda odd", or "totally unhinged" words.
+9. For Story 1 and 2, the user receives a heuristic score based on the story generated, as well as a "wholesome", "kinda odd", and "totally unhinged" label
+10. For Story 3, in addition to the heuristic score and label, the user also gets a Naive Bayes score and commentary on whether the heuristic and NB score matched
 
 ---
 
