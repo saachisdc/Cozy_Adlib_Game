@@ -154,9 +154,57 @@ Calculates the heuristic Unhinged Score and buckets the lables
 
 ## Naive Bayes ML Component Overview
 
----
+Tiny model to score generated text and predict a vibe. Because this is based on vocabulary and not semantics, the output for Story 3 does not trigger the more extreme vibes that were signal words in the heuristic model. Therefore, the output of the model is always "kinda odd", as exemplified by "(simulated_runs/runs_story2_magical_campfire_with_nb.csv)", with high probability due to "kinda odd" just being the most neutral
 
-## Future Ideas (Optional)
+### `simulate_story_runs.js`
+
+**Purpose:**
+Simulate x number of simulations of specific story specified in code
+
+**Responsibilities:**
+
+- for each run of a specified story, generate storyId, generatedText, number of wrong choices, number of signal words and what they were (and categorized cozy, weird, selfAware), unhinged score, and label
+- generate csv
+- ex run "scripts/simulate_story_runs.js 500" in terminal to get csv with 500 results
+- resulting runs are used in train_nb.js to confirm CSV parsing + story import style and output the tokens
+
+### `train_nb.js`
+
+**Purpose:**
+
+- create nb_model based on training data
+
+**Responsibilities:**
+
+- analyze 500 runs from Story 1 and 500 runs from Story 2
+- trains NB on generatedText → label
+- output nb_model.json
+
+### `nb_model.json`
+
+**Purpose:**
+
+- json model that works as offline dictionary to help predict vibe of text
+
+**Responsibilities:**
+
+- provide labels, label docCounts, and tokenCount frequencies
+- docCounts and tokenCounts go into the nb.js probability model
+
+### `nb.js`
+
+**Purpose:**
+
+- vibe predictor: is given text "wholesome", "kinda odd" or "totally unhinged"
+
+**Responsibilities:**
+
+- Naive Bayes model that looks at a generated text (after some potential cleanup and spelling conversions) and predicts a vibe based on the offline json dictionary
+- tokenizes text (same as during training)
+- For each token: Look up how often it appeared in this label during training, then apply Laplace smoothing, and add its log probability to the score
+- pick the best label based on the log scores
+- calculate probability from the log score
+- give both the lable and probability to Game.jsx to surface to user generating Story 3 text
 
 ---
 
