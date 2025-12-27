@@ -60,9 +60,7 @@ src/
 │   └── Story1BakedMittens.js
 │   └── Story2MagicalCampfire.js
 │   └── Story3CrunchyVideoGame.js
-│   └── StoryLayout.jsx
 │   └── tmptestunhingedscore.js
-│   └── Typewriter.jsx
 │   └── UnhingedScore.js
 ├── ml/
 │   └── nb.js
@@ -70,7 +68,6 @@ src/
 │   └── nb_model.json
 ├── styles/
 │   └── components/
-│       └── sectionfooter.css
 │       └── storylayout.css
 │   └── global.css
 │   └── modern-normalize.css
@@ -82,7 +79,7 @@ src/
 
 ---
 
-## Component Overview
+## Game and Heuristic Component Overview
 
 ### `App.jsx`
 
@@ -95,8 +92,6 @@ Top-level application wrapper.
 - Handles global layout and styling
 - May later be extended to switch between multiple stories
 
----
-
 ### `Game.jsx`
 
 **Purpose:**
@@ -104,14 +99,12 @@ Core game logic and state management.
 
 **Responsibilities:**
 
-- Tracks which step of the story the user is on
-- Tracks the user’s choices
+- Tracks the user’s choices (open/close menu, word and story selection, restart)
 - Controls when the typewriter pauses and resumes
-- Replaces placeholders with selected choices
-- Computes simple scoring logic (e.g. number of correct choices)
+- Tracks which step of the story the user is on
+- Replaces placeholders with selected choices (word and images)
 - Selects the final story ending based on score
-
----
+- Updates scores and labels and, if applicable, if heuristic and ml model scores matched
 
 ### `Typewriter.jsx`
 
@@ -123,9 +116,7 @@ Animates text so it appears one character at a time.
 - Gradually reveals a target string
 - Supports pausing and resuming
 - Calls a callback when typing reaches the end of the current text
-- Does **not** contain story or game logic
-
----
+- Notes where images will be added (left or right alternating)
 
 ### `Story1BakedMittens.jsx`
 
@@ -135,48 +126,37 @@ Example of one of the stories. Holds the content for a specific story.
 **Includes:**
 
 - Story title and intro text
+- Images pathway to public folder
 - Ordered story steps
 - Choice options for each step
 - Branch text for each choice
 - Definition of which choices are “correct”
 - Possible ending variations
+- Unhinged heuristic model, with weight and clamping
 
 **Design goal:**
 This file should be easy to duplicate to create additional stories.
 
----
-
-### `StoryLayout.jsx`
+### `UnhingedScore.js`
 
 **Purpose:**
-Determines the layout of the story section of the app
+Calculates the heuristic Unhinged Score and buckets the lables
 
-**Includes:**
+**Heuristic Scoring Logic:**
 
-- Story title, story selection, actual story, footer
-
-**Design goal:**
-This file should be easy to duplicate to create additional stories.
+- Each story step has one “correct” choice, which earns the user 1 point per correct choice (total of 3)
+- Each story has an unhinged model that includes a list of cozy words (-1), weird words (+2), and self-aware words (+1) that appear in the specific story
+- model tracks user choices and signal words in resulting text
+- model adds up the number of wrong word choices, cozy words, weird words, and self-aware words and gives a clamped score from 0 to 10 to Game.jsx
+- model provides a label to Game.jsx to surface, based on score: 0-3 (wholesome), 4-6 (kinda odd), 7-10 (totally unhinged)
 
 ---
 
-## Scoring Logic (Current)
-
-- Each story step has one “correct” choice
-- The user earns 1 point per correct choice
-- Total score ranges from 0–3
-- The final line of the story changes based on the score
-
-This logic is currently implemented in **plain JavaScript**.
+## Naive Bayes ML Component Overview
 
 ---
 
 ## Future Ideas (Optional)
-
-- Add more stories using the same structure
-- Introduce a playful “unhinged score” based on text features
-- Experiment with lightweight ML-style scoring in JavaScript
-- Improve mobile UI and accessibility
 
 ---
 

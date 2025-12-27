@@ -352,8 +352,8 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
         <div className="footer  menu_section__spaced">
           <p>Copyright © 2025 Saachi Sadcha - All Rights Reserved.</p>
           <p>
-            All images, 3D models, and content are original and created by
-            Saachi Sadcha. Do not copy, download or sell.
+            All images and content are original and created by Saachi Sadcha. Do
+            not copy, download or sell.
           </p>
         </div>
       </aside>
