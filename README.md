@@ -1,7 +1,11 @@
 # Cozy Madlab Game
 
-A small, experimental mobile-friendly web game built with **React** that lets users build a short story by choosing icons at key moments.
+A small, experimental web game built with **React** that lets users build a short story by choosing icons at key moments.
 The project is intentionally simple and designed as a learning exercise in interactive storytelling, state management, and lightweight scoring logic.
+
+ChatGPT 5.2 was used during ideation, coding the JS and CSS components, providing some text content for the randomized branch inserts, and to understand how to implement machine learning at a small-scale. Feel free to copy and use the code
+
+Generative AI was NOT used for the images; these were modelled and rendered in Blender and Nomad, and post-processed in Procreate. Do not download or copy the images
 
 ---
 
