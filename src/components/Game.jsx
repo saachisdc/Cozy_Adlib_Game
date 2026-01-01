@@ -390,6 +390,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
               {unhingedResult.breakdown.cozyHits} | selfAwareHits:{" "}
               {unhingedResult.breakdown.selfAwareHits}
             </div>
+
             {nbResult && (
               <div>
                 <strong>ML Naive Bayes Score:</strong>{" "}

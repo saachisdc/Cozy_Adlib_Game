@@ -237,6 +237,7 @@
 }
 
 .score_panel_breakdown {
+  margin-top: var(--size-xxs);
   font-size: var(--size-xs);
 }
 .score_panel_breakdown--italic {
