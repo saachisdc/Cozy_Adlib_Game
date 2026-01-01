@@ -194,8 +194,7 @@ Pre-trained model artifact used offline by nb.js for inference
 
 ### `nb.js`
 
-**Purpose:**
-- tiny bag-of-words (unigram) Multinomial Naive Bayes classifier that predicts a story “vibe” label: wholesome, kinda odd, or totally unhinged.
+**Purpose:** Tiny Bag-of-Words (unigram) Multinomial Naive Bayes classifier that predicts a story “vibe” label: wholesome, kinda odd, or totally unhinged.
 
 **Responsibilities:**
 
@@ -211,7 +210,7 @@ Pre-trained model artifact used offline by nb.js for inference
 ###  `simulate_story_runs_with_nb.js`
 
 **Purpose:**
-- Comparison script that generates simulation CSV to compare heuristic scoring vs Naive Bayes vibe prediction on the same generated text.
+Comparison script that generates simulation CSV to compare heuristic scoring vs Naive Bayes vibe prediction on the same generated text.
 
 **Responsibilities:**
 - Adds NB columns to the usual run output:
