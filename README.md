@@ -1,6 +1,6 @@
 # Cozy Madlab Game
 
-A small, experimental web game built with **React** that lets users build a short story by choosing icons at key moments.
+A small, experimental web game built with **React** that lets users build a short story by choosing 1 of 3 words at key moments.
 The project is intentionally simple and designed as a learning exercise in interactive storytelling, state management, and lightweight scoring logic.
 
 ChatGPT 5.2 was used during ideation, coding the JS and CSS components, providing some text content for the randomized branch inserts, and to understand how to implement machine learning at a small-scale. Feel free to copy and use the code
@@ -13,9 +13,9 @@ Generative AI was NOT used for the images; these were modelled and rendered by m
 
 - Create a small, contained game using ReactJS and native Javascript
 - Experiment with interactive, branching narrative
-- Keep the app **static and easily shareable** (no backend required, no saved data, no 3D models)
+- Keep the app **static and easily shareable** (no backend required, no downloading or saved data, no 3D models)
 - Explore beginner-friendly approaches to heuristic scoring and machine learning logic in JavaScript
-- Create enough training data from Stories 1 and 2 for ML - Naive Bayes model to also show ML score based on offline training for Story 3
+- Create enough training data from Stories 1 and 2 for a Naive Bayes ML model to predict Story 3's "vibe"
 
 ---
 
@@ -23,7 +23,7 @@ Generative AI was NOT used for the images; these were modelled and rendered by m
 
 1. A story is typed out using a typewriter effect.
 2. At certain points, the text pauses and shows a placeholder (`...choose a button below...`).
-3. The user selects one of three icon-based choices.
+3. The user selects one of three word choice buttons.
 4. The placeholder is replaced with the chosen word, and the story continues based on that word using randomized branch inserts.
 5. For each word selected, an image shows up on the left or right of the screen near the chosen word.
 6. For each story, there are 1,728 slightly different stories that can be generated.
@@ -158,12 +158,12 @@ Calculates the heuristic Unhinged Score and buckets the lables
 
 ## Naive Bayes ML Component Overview
 
-Tiny model to score generated text and predict a vibe. Because this is based on vocabulary and not semantics, the output for Story 3 does not trigger the more extreme vibes that were signal words in the heuristic model. Therefore, the output of the model is always "kinda odd", as exemplified by "(simulated_runs/runs_story2_magical_campfire_with_nb.csv)", with high probability due to "kinda odd" just being the most neutral
+Tiny supervised model that uses Bag-of-Words (unigram) representation to assess the generated text and predict a vibe. Because this is based on vocabulary and not semantics, the output for Story 3 does not trigger the more extreme vibes that were noted by signal words and phrases in the heuristic model. Therefore, the output of the model will most likely be "kinda odd", as exemplified by "(simulated_runs/runs_story2_magical_campfire_with_nb.csv)". 
 
 ### `simulate_story_runs.js`
 
 **Purpose:**
-Simulate x number of simulations of specific story specified in code
+Simulate x runs of a specified story and export results to CSV
 
 **Responsibilities:**
 
@@ -175,11 +175,9 @@ Simulate x number of simulations of specific story specified in code
 ### `train_nb.js`
 
 **Purpose:**
-
-- create nb_model based on training data
+Train a Naive Bayes model from simulated story runs
 
 **Responsibilities:**
-
 - analyze 500 runs from Story 1 and 500 runs from Story 2
 - trains NB on generatedText → label
 - output nb_model.json
@@ -187,8 +185,7 @@ Simulate x number of simulations of specific story specified in code
 ### `nb_model.json`
 
 **Purpose:**
-
-- json model that works as offline dictionary to help predict vibe of text
+- Pre-trained model artifact used offline by nb.js for inference
 
 **Responsibilities:**
 
@@ -198,17 +195,28 @@ Simulate x number of simulations of specific story specified in code
 ### `nb.js`
 
 **Purpose:**
-
-- vibe predictor: is given text "wholesome", "kinda odd" or "totally unhinged"
+- tiny bag-of-words (unigram) Multinomial Naive Bayes classifier that predicts a story “vibe” label: wholesome, kinda odd, or totally unhinged.
 
 **Responsibilities:**
 
-- Naive Bayes model that looks at a generated text (after some potential cleanup and spelling conversions) and predicts a vibe based on the offline json dictionary
-- tokenizes text (same as during training)
-- For each token: Look up how often it appeared in this label during training, then apply Laplace smoothing, and add its log probability to the score
-- pick the best label based on the log scores
-- calculate probability from the log score
-- give both the lable and probability to Game.jsx to surface to user generating Story 3 text
+- tokenizes input text (lowercase, strips punctuation except apostrophes, drops 1-character tokens)
+- applies a small American → Canadian spelling normalization for a few common words (e.g., color → colour)
+- scores each label using:
+  - a smoothed class prior based on training document counts, and
+  - smoothed token likelihoods based on per-label token frequencies (Laplace smoothing, alpha)
+- chooses the label with the highest log-score
+- converts label log-scores into a normalized probability distribution (softmax)
+- label and the probability are picked up by Game.jsx to surface to user in the score panel
+
+###  `simulate_story_runs_with_nb.js`
+
+**Purpose:**
+- Comparison script that generates simulation CSV to compare heuristic scoring vs Naive Bayes vibe prediction on the same generated text.
+
+**Responsibilities:**
+- Adds NB columns to the usual run output:
+  - nbLabel, nbP, per-class probabilities
+  - nbTopTokens (optional explainability)
 
 ---
 
