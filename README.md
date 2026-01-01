@@ -185,7 +185,7 @@ Train a Naive Bayes model from simulated story runs
 ### `nb_model.json`
 
 **Purpose:**
-- Pre-trained model artifact used offline by nb.js for inference
+Pre-trained model artifact used offline by nb.js for inference
 
 **Responsibilities:**
 
