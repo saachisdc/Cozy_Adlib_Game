@@ -51,7 +51,7 @@ export const Story3CrunchyVideoGame = {
         { id: "cookie", label: "chocolate chip cookie", image: IMAGES.cookie },
       ],
 
-      afterChoicePrefix: "; ",
+      afterChoicePrefix: ": ",
 
       branches: {
         armchair: [
