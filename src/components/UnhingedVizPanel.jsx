@@ -178,7 +178,13 @@ function CurrentRunScene({ snapshot, typingPaused }) {
   );
 }
 
-export default function UnhingedVizPanel({ snapshot, typingPaused }) {
+export default function UnhingedVizPanel({
+  snapshot,
+  typingPaused,
+  currentStoryId, // not used yet, but handy to have
+  historicalRuns = [],
+  totalSteps,
+}) {
   const hasSnapshot = !!snapshot;
 
   return (

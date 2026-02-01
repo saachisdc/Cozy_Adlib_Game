@@ -14,6 +14,10 @@ import Story1BakedMittens from "./Story1BakedMittens";
 import Story2MagicalCampfire from "./Story2MagicalCampfire";
 import Story3CrunchyVideoGame from "./Story3CrunchyVideoGame";
 
+import runsStory1 from "../simulated_runs/runs_story1_baked_mittens.json";
+import runsStory2 from "../simulated_runs/runs_story2_magical_campfire.json";
+import runsStory3 from "../simulated_runs/runs_story3_crunchy_video_game.json";
+
 import { computeUnhingedScore } from "./UnhingedScore";
 import nbModel from "../models/nb_model.json";
 import { predictVibe } from "../ml/nb";
@@ -71,6 +75,12 @@ const STORIES = [
   Story2MagicalCampfire,
   Story3CrunchyVideoGame,
 ];
+
+const HISTORICAL_RUNS = {
+  story1_baked_mittens: runsStory1,
+  story2_magical_campfire: runsStory2,
+  story3_crunchy_video_game: runsStory3,
+};
 
 export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   // 👇 Current active story
@@ -376,6 +386,9 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
         <UnhingedVizPanel
           snapshot={heuristicSnapshot}
           typingPaused={waitingForChoice}
+          currentStoryId={story.id}
+          historicalRuns={HISTORICAL_RUNS[story.id] || []}
+          totalSteps={story.steps?.length ?? 0}
         />
 
         <div className="menu_section">
