@@ -171,8 +171,9 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
       const wasCorrect = !!step.correct && step.correct === choiceId;
       const newScore = score + (wasCorrect ? 1 : 0);
 
-      const isLast = stepIndex === (story.steps?.length ?? 0) - 1;
-      const total = story.steps?.length ?? 0;
+      const totalSteps = story.steps?.length ?? 0;
+      const isLast = stepIndex === totalSteps - 1;
+      const stepsSoFar = stepIndex + 1; // after this click
 
       setStoryText((prev) => {
         const replaced = replaceLast(prev, PLACEHOLDER, label);
@@ -190,9 +191,12 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           const result = computeUnhingedScore({
             storyText: finalText,
             correctCount: newScore,
-            totalSteps: total,
+            totalSteps, // full story used for final score
             modelConfig: story.unhingedModel,
           });
+
+          // 👇 NEW: At the end, stepsSoFar === totalSteps, so this matches breakdown.wrongChoices
+          const wrongChoicesSoFar = totalSteps - newScore;
 
           // 👇 NEW: store breakdown for the viz
           setHeuristicSnapshot({
@@ -200,7 +204,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             weirdHits: result.breakdown.weirdHits,
             selfAwareHits: result.breakdown.selfAwareHits,
             wrongChoices: result.breakdown.wrongChoices,
-            totalSteps: total,
+            totalSteps, // full denominator for display
           });
 
           setShowUnhinged(false);
@@ -214,26 +218,29 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           setNbResult(nb);
 
           return (
-            finalText + ` \n\nYou got ${newScore}/${total} choices correct.`
+            finalText +
+            ` \n\nYou got ${newScore}/${totalSteps} choices correct.`
           );
         }
 
         // 👇 NON-LAST branch: partial score
         const nextText = replaced + prefix + imgInsert + branchInsert + after;
 
+        // Score based only on steps we've actually taken so far
         const partialResult = computeUnhingedScore({
           storyText: nextText,
           correctCount: newScore,
-          totalSteps: total,
+          totalSteps: stepsSoFar, // 👈 only the answered steps
           modelConfig: story.unhingedModel,
         });
+        const wrongChoicesSoFar = stepsSoFar - newScore;
 
         setHeuristicSnapshot({
           cozyHits: partialResult.breakdown.cozyHits,
           weirdHits: partialResult.breakdown.weirdHits,
           selfAwareHits: partialResult.breakdown.selfAwareHits,
-          wrongChoices: partialResult.breakdown.wrongChoices,
-          totalSteps: total,
+          wrongChoices: wrongChoicesSoFar, // 👈 this is what you show
+          totalSteps, // 👈 still show /3 for Story 1
         });
 
         return nextText;
