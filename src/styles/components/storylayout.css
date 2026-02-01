@@ -275,6 +275,11 @@
   font-size: var(--size-sm);
 }
 
+.word_select_or {
+  align-self: center;
+  font-size: var(--size-xs);
+}
+
 .story_scroll::-webkit-scrollbar {
   width: 8px;
 }

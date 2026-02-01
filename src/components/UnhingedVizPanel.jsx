@@ -1,7 +1,7 @@
 // UnhingedVizPanel.jsx
 import React, { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Text } from "@react-three/drei";
+import { OrbitControls, Text, Billboard } from "@react-three/drei";
 
 import "/styles/components/unhingedviz.css";
 
@@ -10,18 +10,26 @@ import "/styles/components/unhingedviz.css";
  * 0   -> blue  (all correct)
  * 0.5 -> purple
  * 1   -> red   (all wrong)
+ *
+ * Works for both live snapshot and historical runs.
  */
-function wrongRatioToColor(snapshot) {
-  if (!snapshot || !snapshot.totalSteps) {
+function wrongRatioToColor(data, totalStepsOverride) {
+  if (!data) {
     return "rgb(56, 189, 248)"; // default cyan-ish
   }
 
-  const ratio = Math.min(
-    1,
-    Math.max(0, snapshot.wrongChoices / snapshot.totalSteps),
-  );
+  const totalSteps =
+    typeof totalStepsOverride === "number"
+      ? totalStepsOverride
+      : data.totalSteps;
 
-  const blue = [56, 189, 248]; // tailwind sky-400
+  if (!totalSteps || totalSteps <= 0) {
+    return "rgb(56, 189, 248)";
+  }
+
+  const ratio = Math.min(1, Math.max(0, data.wrongChoices / totalSteps));
+
+  const blue = [56, 189, 248]; // sky-400
   const purple = [168, 85, 247]; // violet-500
   const red = [239, 68, 68]; // red-500
 
@@ -50,14 +58,13 @@ function wrongRatioToColor(snapshot) {
 
 /**
  * Map total “signal” hits to a sphere size in world units.
+ * Works for snapshot + historical.
  */
-function hitsToSize(snapshot) {
-  if (!snapshot) return 0.12;
+function hitsToSize(data) {
+  if (!data) return 0.12;
 
   const totalHits =
-    (snapshot.cozyHits ?? 0) +
-    (snapshot.weirdHits ?? 0) +
-    (snapshot.selfAwareHits ?? 0);
+    (data.cozyHits ?? 0) + (data.weirdHits ?? 0) + (data.selfAwareHits ?? 0);
 
   const maxHits = 8; // soft cap, tweak later
   const norm = Math.min(1, totalHits / maxHits);
@@ -70,22 +77,62 @@ function hitsToSize(snapshot) {
  * Map cozy/weird/selfAware hits into a 3D position.
  * x = cozy, y = weird, z = selfAware, scaled down to a comfy world size.
  */
-function snapshotToTargetPosition(snapshot) {
-  if (!snapshot) return [0, 0, 0];
+function snapshotToTargetPosition(data) {
+  if (!data) return [0, 0, 0];
 
   const scale = 0.55; // tweakable world scaling
-  const x = (snapshot.cozyHits ?? 0) * scale;
-  const y = (snapshot.weirdHits ?? 0) * scale;
-  const z = (snapshot.selfAwareHits ?? 0) * scale;
+  const x = (data.cozyHits ?? 0) * scale;
+  const y = (data.weirdHits ?? 0) * scale;
+  const z = (data.selfAwareHits ?? 0) * scale;
 
   return [x, y, z];
 }
 
-function CurrentRunPoint({ snapshot, typingPaused }) {
+/**
+ * Faint background cloud of historical runs.
+ */
+function HistoricalCloud({ runs, totalSteps }) {
+  const points = useMemo(
+    () =>
+      (runs || []).map((r, idx) => {
+        const position = snapshotToTargetPosition(r);
+        const color = wrongRatioToColor(r, totalSteps);
+        const size = hitsToSize(r) * 0.4; // smaller than live point
+
+        return { id: idx, position, color, size };
+      }),
+    [runs, totalSteps],
+  );
+
+  return (
+    <group>
+      {points.map((p) => (
+        <mesh key={p.id} position={p.position}>
+          <sphereGeometry args={[p.size, 10, 10]} />
+          <meshStandardMaterial
+            color={p.color}
+            transparent
+            opacity={0.05}
+            roughness={0.7}
+            metalness={0.0}
+          />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+/**
+ * Bright animated point for the current run.
+ */
+function CurrentRunPoint({ snapshot, typingPaused, totalSteps }) {
   const meshRef = useRef();
 
   const target = useMemo(() => snapshotToTargetPosition(snapshot), [snapshot]);
-  const color = useMemo(() => wrongRatioToColor(snapshot), [snapshot]);
+  const color = useMemo(
+    () => wrongRatioToColor(snapshot, totalSteps || snapshot?.totalSteps),
+    [snapshot, totalSteps],
+  );
   const size = useMemo(() => hitsToSize(snapshot), [snapshot]);
 
   // Lerp the sphere towards the target position every frame
@@ -118,8 +165,17 @@ function CurrentRunPoint({ snapshot, typingPaused }) {
   );
 }
 
-function CurrentRunScene({ snapshot, typingPaused }) {
+/**
+ * Full 3D scene: axes + labels + historical cloud + live point.
+ */
+function CurrentRunScene({
+  snapshot,
+  typingPaused,
+  historicalRuns,
+  totalSteps,
+}) {
   const AXIS_LEN = 3; // tweak if you want bigger/smaller axes
+
   return (
     <>
       <ambientLight intensity={0.7} />
@@ -132,14 +188,16 @@ function CurrentRunScene({ snapshot, typingPaused }) {
           <boxGeometry args={[AXIS_LEN, 0.03, 0.03]} />
           <meshStandardMaterial color="#4ade80" transparent opacity={0.6} />
         </mesh>
+
         <Text
           position={[AXIS_LEN + 0.15, 0, 0]}
           fontSize={0.3}
           color="#4ade80"
           anchorX="left"
           anchorY="middle"
+          rotation={[-Math.PI / 2, 0, 0]}
         >
-          cozy
+          cozy hits
         </Text>
 
         {/* Y axis — weird */}
@@ -147,6 +205,7 @@ function CurrentRunScene({ snapshot, typingPaused }) {
           <boxGeometry args={[0.03, AXIS_LEN, 0.03]} />
           <meshStandardMaterial color="#a855f7" transparent opacity={0.6} />
         </mesh>
+
         <Text
           position={[0, AXIS_LEN + 0.15, 0]}
           fontSize={0.3}
@@ -154,26 +213,36 @@ function CurrentRunScene({ snapshot, typingPaused }) {
           anchorX="center"
           anchorY="bottom"
         >
-          weird
+          weird hits
         </Text>
 
         {/* Z axis — self-aware */}
         <mesh position={[0, 0, AXIS_LEN / 2]}>
           <boxGeometry args={[0.03, 0.03, AXIS_LEN]} />
-          <meshStandardMaterial color="#f83842" transparent opacity={0.6} />
+          <meshStandardMaterial color="#38bdf8" transparent opacity={0.6} />
         </mesh>
+
         <Text
           position={[0, 0, AXIS_LEN + 0.15]}
           fontSize={0.3}
-          color="#f83842"
+          color="#38bdf8"
           anchorX="center"
           anchorY="middle"
+          rotation={[-Math.PI / 2, 0, 0]}
         >
-          self-aware
+          self-aware hits
         </Text>
       </group>
 
-      <CurrentRunPoint snapshot={snapshot} typingPaused={typingPaused} />
+      {/* Historical runs as faint background cloud */}
+      <HistoricalCloud runs={historicalRuns} totalSteps={totalSteps} />
+
+      {/* Bright animated current run point */}
+      <CurrentRunPoint
+        snapshot={snapshot}
+        typingPaused={typingPaused}
+        totalSteps={totalSteps}
+      />
     </>
   );
 }
@@ -225,7 +294,7 @@ export default function UnhingedVizPanel({
 
       {/* 3D viz – only really interesting when we have some data */}
       <div className="viz_canvas_wrapper">
-        <Canvas camera={{ position: [5, 5, 5], fov: 45 }}>
+        <Canvas camera={{ position: [5, 6, 5], fov: 45 }}>
           {/* Orbit-only camera controls */}
           <OrbitControls
             enableZoom={false}
@@ -235,7 +304,12 @@ export default function UnhingedVizPanel({
             rotateSpeed={0.7}
           />
 
-          <CurrentRunScene snapshot={snapshot} typingPaused={typingPaused} />
+          <CurrentRunScene
+            snapshot={snapshot}
+            typingPaused={typingPaused}
+            historicalRuns={historicalRuns}
+            totalSteps={totalSteps}
+          />
         </Canvas>
       </div>
       <p className="viz_footer_note">

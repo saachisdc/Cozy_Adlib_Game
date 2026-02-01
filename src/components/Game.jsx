@@ -447,7 +447,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             <div className="score_panel_breakdown">
               cozyHits: {unhingedResult.breakdown.cozyHits} | weirdHits:{" "}
               {unhingedResult.breakdown.weirdHits} | selfAwareHits:{" "}
-              {unhingedResult.breakdown.selfAwareHits} |wrongChoices:{" "}
+              {unhingedResult.breakdown.selfAwareHits} | wrongChoices:{" "}
               {unhingedResult.breakdown.wrongChoices}
             </div>
 
@@ -495,6 +495,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             </button>
           ))}
           {/* story restart button */}
+          <span className="word_select_or">or</span>
           <button className="btn game_btn" onClick={restart}>
             restart
           </button>
