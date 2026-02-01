@@ -1,0 +1,63 @@
+/* Hidden by default (mobile); we'll show it on desktop only */
+.viz_container {
+  display: none;
+}
+
+/* Desktop-only viz */
+@media (min-width: 1024px) {
+  .viz_container {
+    display: block;
+    margin-bottom: 2rem;
+    padding: 0.75rem 0.85rem 0.85rem;
+    border-radius: 10px;
+    background: var(--colour-background);
+    color: var(--colour-primary);
+    font-size: var(--size-xs);
+    box-shadow: 0 8px 10px rgba(15, 23, 42, 0.45);
+  }
+
+  .viz_title {
+    margin: 0 0 0.25rem;
+    font-size: var(--size-sm);
+  }
+
+  .viz_subtitle {
+    margin: 0 0 0.75rem;
+    font-size: 0.75rem;
+    color: var(--colour-primary);
+  }
+
+  .viz_stats {
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.75);
+    padding: 0.4rem 0.6rem;
+  }
+
+  .viz_stats_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.15rem 0;
+  }
+
+  .viz_stats_row span:first-child {
+    font-size: 0.75rem;
+  }
+
+  .viz_stats_row span:last-child {
+    font-weight: 600;
+  }
+
+  .viz_hint {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    color: var(--colour-secondary);
+  }
+
+  .viz_footer_note {
+    margin: 0;
+    font-size: 0.7rem;
+    color: var(--colour-text);
+  }
+}

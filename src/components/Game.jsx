@@ -7,6 +7,7 @@ import React, {
   useRef,
 } from "react";
 import Typewriter from "./Typewriter";
+import UnhingedVizPanel from "./UnhingedVizPanel";
 
 import Story1BakedMittens from "./Story1BakedMittens";
 import Story2MagicalCampfire from "./Story2MagicalCampfire";
@@ -210,7 +211,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
       setStepIndex((i) => i + 1);
       setScore(newScore);
     },
-    [step, score, stepIndex, story]
+    [step, score, stepIndex, story],
   );
 
   useEffect(() => {
@@ -330,6 +331,9 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             ✕
           </button>
         </div>
+
+        {/* 👇 NEW: desktop-only heuristic viz placeholder */}
+        <UnhingedVizPanel snapshot={null} typingPaused={waitingForChoice} />
 
         <div className="menu_section">
           <p>Story Select</p>
