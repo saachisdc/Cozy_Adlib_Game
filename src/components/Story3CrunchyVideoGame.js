@@ -198,6 +198,7 @@ export const Story3CrunchyVideoGame = {
       "hummed happily",
       "warm disc",
       "sweet and comforting",
+      "warmth settle",
     ],
 
     selfAwareWords: [

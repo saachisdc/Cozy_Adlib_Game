@@ -7,7 +7,7 @@
 @media (min-width: 1024px) {
   .viz_container {
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     padding: 0.75rem 0.85rem 0.85rem;
     border-radius: 10px;
     background: var(--colour-background);
@@ -39,8 +39,8 @@
 
 .viz_subtitle {
   margin: 0 0 0.75rem;
-  font-size: 0.75rem;
-  color: var(--colour-primary);
+  font-size: var(--size-xs);
+  color: var(--colour-text);
 }
 
 .viz_stats {
@@ -67,12 +67,43 @@
 
 .viz_hint {
   margin: 0 0 0.5rem;
-  font-size: 0.75rem;
-  color: var(--colour-secondary);
+  font-size: var(--size-xs);
+  color: var(--colour-primary);
 }
 
 .viz_footer_note {
   margin: 0;
-  font-size: 0.7rem;
+  font-size: var(--size-xs);
   color: var(--colour-text);
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .viz_canvas_wrapper {
+    height: 220px;
+  }
+  .viz_title {
+    font-size: var(--size-base);
+  }
+
+  .viz_subtitle,
+  .viz_hint,
+  .viz_footer_note {
+    font-size: var(--size-sm);
+  }
+}
+/* 2xl */
+@media (min-width: 1536px) {
+  .viz_canvas_wrapper {
+    height: 300px;
+  }
+  .viz_title {
+    font-size: var(--size-lg);
+  }
+
+  .viz_subtitle,
+  .viz_hint,
+  .viz_footer_note {
+    font-size: var(--size-base);
+  }
 }

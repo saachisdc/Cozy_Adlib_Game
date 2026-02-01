@@ -82,8 +82,7 @@
 }
 
 .menu_section {
-  margin-bottom: 1rem;
-  gap: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -401,7 +400,13 @@
     width: 500px;
     height: 500px;
   }
+  .menu_drawer {
+    width: 400px;
+  }
 }
 /* 2xl */
 @media (min-width: 1536px) {
+  .menu_drawer {
+    width: 500px;
+  }
 }
