@@ -30,7 +30,7 @@
   .viz_stats {
     margin-bottom: 0.5rem;
     border-radius: 6px;
-    background: rgba(15, 23, 42, 0.75);
+    background: var(--colour-accent);
     padding: 0.4rem 0.6rem;
   }
 

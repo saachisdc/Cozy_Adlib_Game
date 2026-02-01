@@ -106,6 +106,9 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   // For restarting Typewriter internal state cleanly
   const [resetSignal, setResetSignal] = useState(0);
 
+  // 👇 NEW: snapshot of heuristic breakdown for the viz
+  const [heuristicSnapshot, setHeuristicSnapshot] = useState(null);
+
   const step = story.steps[stepIndex] ?? null;
 
   // Reset when story changes
@@ -118,6 +121,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setUnhingedResult(null);
     setShowUnhinged(false);
     setNbResult(null);
+    setHeuristicSnapshot(null); // 👈 NEW
     // setChoiceImages([]);
   }, [story]);
 
@@ -187,6 +191,15 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             correctCount: newScore,
             totalSteps: total,
             modelConfig: story.unhingedModel,
+          });
+
+          // 👇 NEW: store breakdown for the viz
+          setHeuristicSnapshot({
+            cozyHits: result.breakdown.cozyHits,
+            weirdHits: result.breakdown.weirdHits,
+            selfAwareHits: result.breakdown.selfAwareHits,
+            wrongChoices: result.breakdown.wrongChoices,
+            totalSteps: total,
           });
 
           setShowUnhinged(false);
@@ -264,6 +277,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setUnhingedResult(null);
     setShowUnhinged(false);
     setNbResult(null);
+    setHeuristicSnapshot(null); // 👈 NEW
     //setChoiceImages([]);
   }, [story]);
 
@@ -333,7 +347,10 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
         </div>
 
         {/* 👇 NEW: desktop-only heuristic viz placeholder */}
-        <UnhingedVizPanel snapshot={null} typingPaused={waitingForChoice} />
+        <UnhingedVizPanel
+          snapshot={heuristicSnapshot}
+          typingPaused={waitingForChoice}
+        />
 
         <div className="menu_section">
           <p>Story Select</p>
