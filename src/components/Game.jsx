@@ -6,6 +6,7 @@ import React, {
   useState,
   useRef,
 } from "react";
+
 import Typewriter from "./Typewriter";
 import UnhingedVizPanel from "./UnhingedVizPanel";
 
@@ -217,7 +218,25 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           );
         }
 
-        return replaced + prefix + imgInsert + branchInsert + after;
+        // 👇 NON-LAST branch: partial score
+        const nextText = replaced + prefix + imgInsert + branchInsert + after;
+
+        const partialResult = computeUnhingedScore({
+          storyText: nextText,
+          correctCount: newScore,
+          totalSteps: total,
+          modelConfig: story.unhingedModel,
+        });
+
+        setHeuristicSnapshot({
+          cozyHits: partialResult.breakdown.cozyHits,
+          weirdHits: partialResult.breakdown.weirdHits,
+          selfAwareHits: partialResult.breakdown.selfAwareHits,
+          wrongChoices: partialResult.breakdown.wrongChoices,
+          totalSteps: total,
+        });
+
+        return nextText;
       });
 
       setWaitingForChoice(false);
