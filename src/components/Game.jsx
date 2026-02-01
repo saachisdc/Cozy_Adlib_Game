@@ -432,10 +432,10 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
 
             {/* Optional debug info while you’re tuning */}
             <div className="score_panel_breakdown">
-              wrongChoices: {unhingedResult.breakdown.wrongChoices} | weirdHits:{" "}
-              {unhingedResult.breakdown.weirdHits} | cozyHits:{" "}
-              {unhingedResult.breakdown.cozyHits} | selfAwareHits:{" "}
-              {unhingedResult.breakdown.selfAwareHits}
+              cozyHits: {unhingedResult.breakdown.cozyHits} | weirdHits:{" "}
+              {unhingedResult.breakdown.weirdHits} | selfAwareHits:{" "}
+              {unhingedResult.breakdown.selfAwareHits} |wrongChoices:{" "}
+              {unhingedResult.breakdown.wrongChoices}
             </div>
 
             {nbResult && (
