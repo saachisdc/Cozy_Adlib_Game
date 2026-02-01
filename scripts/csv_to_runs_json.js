@@ -1,6 +1,7 @@
 // scripts/csv_to_runs_json.js
 import fs from "fs";
 import path from "path";
+import Papa from "papaparse";
 
 const DIR = "./simulated_runs";
 
@@ -13,23 +14,28 @@ for (const file of files) {
   const outPath = csvPath.replace(".csv", ".json");
 
   const raw = fs.readFileSync(csvPath, "utf8");
-  const lines = raw.trim().split("\n");
-  const headers = lines[0].split(",");
 
-  const idx = (name) => headers.indexOf(name);
+  // PapaParse will respect quotes, so commas inside generatedText are fine
+  const parsed = Papa.parse(raw, {
+    header: true,
+    skipEmptyLines: true,
+  });
 
-  const rows = lines.slice(1).map((line) => {
-    const cols = line.split(",");
+  if (parsed.errors.length) {
+    console.error(`⚠️ Errors while parsing ${file}`, parsed.errors[0]);
+  }
 
+  const rows = parsed.data.map((row) => {
+    // Headers should match these exactly; adjust here if needed.
     return {
-      cozyHits: Number(cols[idx("cozyHits")]),
-      weirdHits: Number(cols[idx("weirdHits")]),
-      selfAwareHits: Number(cols[idx("selfAwareHits")]),
-      wrongChoices: Number(cols[idx("wrongChoices")]),
-      label: cols[idx("label")],
+      cozyHits: Number(row.cozyHits ?? 0),
+      weirdHits: Number(row.weirdHits ?? 0),
+      selfAwareHits: Number(row.selfAwareHits ?? 0),
+      wrongChoices: Number(row.wrongChoices ?? 0),
+      label: row.label,
     };
   });
 
   fs.writeFileSync(outPath, JSON.stringify(rows, null, 2));
-  console.log(`✓ ${file} → ${rows.length} runs`);
+  console.log(`✓ ${file} → ${rows.length} runs → ${outPath}`);
 }
