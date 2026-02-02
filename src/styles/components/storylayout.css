@@ -82,7 +82,6 @@
 }
 
 .menu_section {
-  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -91,12 +90,14 @@
   margin-top: auto;
 }
 
+.menu_section_desktop {
+  display: none;
+}
 /* Make story buttons feel better in a drawer */
 .menu_drawer .story_select_btns {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 0.5rem;
 }
 
 .menu_drawer .game_btn {
@@ -109,6 +110,10 @@
   .menu_overlay {
     transition: none;
   }
+}
+
+.btn_select_title {
+  margin-bottom: 0.5rem;
 }
 
 .story_select_btns {
@@ -251,7 +256,6 @@
   text-align: center;
   justify-items: center;
   background: var(--colour-dark); /* optional but nice */
-  gap: 1rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
@@ -346,10 +350,6 @@
     display: none;
   }
 
-  .story_select_btns {
-    margin-top: 5rem;
-  }
-
   /* make room for the sidebar so story doesn't go underneath it */
   .game_container {
     margin-right: 340px; /* must match .menu_drawer width */
@@ -359,6 +359,16 @@
   /* if your bottom bar is fixed-width full screen, also make room */
   .bottom_bar {
     margin-right: 340px; /* optional; remove if you want it full width */
+  }
+
+  .menu_section {
+    display: none;
+  }
+
+  .menu_section_desktop {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
   }
 
   /* if the top bar spans full width, keep it full width (or also inset) */

@@ -1,7 +1,7 @@
 // UnhingedVizPanel.jsx
 import React, { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Text, Billboard } from "@react-three/drei";
+import { OrbitControls, Text, Html } from "@react-three/drei";
 
 import "/styles/components/unhingedviz.css";
 
@@ -310,6 +310,15 @@ export default function UnhingedVizPanel({
             historicalRuns={historicalRuns}
             totalSteps={totalSteps}
           />
+          <Html
+            position={[0, 0, 0]} // position doesn’t matter in fullscreen mode
+            fullscreen
+            style={{
+              pointerEvents: "none", // 👈 important: don't block orbit controls
+            }}
+          >
+            <div className="viz_hint_mouse">use mouse to rotate</div>
+          </Html>
         </Canvas>
       </div>
       <p className="viz_footer_note">

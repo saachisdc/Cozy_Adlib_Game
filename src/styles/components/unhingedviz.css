@@ -70,6 +70,11 @@
   font-size: var(--size-xs);
   color: var(--colour-primary);
 }
+.viz_hint_mouse {
+  margin: 1rem 1rem 0.5rem;
+  font-size: var(--size-xxs);
+  color: var(--colour-primary);
+}
 
 .viz_footer_note {
   margin: 0;
@@ -90,6 +95,9 @@
   .viz_hint,
   .viz_footer_note {
     font-size: var(--size-sm);
+  }
+  .viz_hint_mouse {
+    font-size: var(--size-xs);
   }
 }
 /* 2xl */

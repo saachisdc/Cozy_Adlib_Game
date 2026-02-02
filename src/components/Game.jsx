@@ -392,7 +392,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
         />
 
         <div className="menu_section">
-          <p>Story Select</p>
+          <p className="btn_select_title">Story Select</p>
           <div className="story_select_btns">
             <button className="btn game_btn" onClick={selectStory1}>
               Story 1
@@ -482,7 +482,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
       </main>
       {/* footer and word choice buttons */}
       <div className="bottom_bar">
-        <p>Word Select</p>
+        <p className="btn_select_title">Word Select</p>
         <div className="word_select_btns">
           {buttons.map((c) => (
             <button
@@ -499,6 +499,23 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           <button className="btn game_btn" onClick={restart}>
             restart
           </button>
+        </div>
+        <div className="menu_section_desktop">
+          <p className="btn_select_title">Story Select</p>
+          <div className="story_select_btns">
+            <button className="btn game_btn" onClick={selectStory1}>
+              Story 1
+            </button>
+            <button className="btn game_btn" onClick={selectStory2}>
+              Story 2
+            </button>
+            <button className="btn game_btn" onClick={selectStory3}>
+              Story 3 🤖
+            </button>
+            <button className="btn game_btn" onClick={selectRandomStory}>
+              Random story 🎲
+            </button>
+          </div>
         </div>
       </div>
     </div>
