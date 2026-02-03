@@ -46,7 +46,11 @@ Generative AI was NOT used for the images; these were modelled and rendered by m
 ## Project Structure
 
 ```text
+public/images
+└── various.webp
 scripts/
+└── csv_to_runs_json_with_nb.js
+└── csv_to_runs_json.js
 └── simulate_story_runs_with_nb.js
 └── simulate_story_runs.js
 └── train_nb.js
