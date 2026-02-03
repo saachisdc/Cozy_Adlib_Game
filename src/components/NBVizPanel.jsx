@@ -192,6 +192,7 @@ function CurrentRunScene({
           color="#4ade80"
           anchorX="left"
           anchorY="middle"
+          rotation={[-Math.PI / 2, 0, 0]}
         >
           p(wholesome)
         </Text>
@@ -208,6 +209,7 @@ function CurrentRunScene({
           color="#a855f7"
           anchorX="center"
           anchorY="bottom"
+          rotation={[0, Math.PI / 4, 0]}
         >
           p(kinda odd)
         </Text>
@@ -224,6 +226,7 @@ function CurrentRunScene({
           color="#38bdf8"
           anchorX="center"
           anchorY="middle"
+          rotation={[-Math.PI / 2, 0, 0]}
         >
           p(totally unhinged)
         </Text>
@@ -257,12 +260,13 @@ export default function NBVizPanel({
 
   return (
     <section className="viz_container">
-      <h2 className="viz_title">NB Explorer (WIP)</h2>
+      <h2 className="viz_title"> Naive Bayes Explorer </h2>
       <p className="viz_subtitle">
         This panel shows a 3D point for Story 3 based on probabilities from the
-        Naive Bayes model (trained on Stories 1–2).
+        Naive Bayes model (trained on Stories 1–2). The color indicates how many
+        wrong choices were made. The size indicates confidence (max
+        probability).
       </p>
-
       {hasSnapshot ? (
         <div className="viz_stats">
           <div className="viz_stats_row">
@@ -286,11 +290,9 @@ export default function NBVizPanel({
         </div>
       ) : (
         <p className="viz_hint">
-          Play Story 3 to the end to see how the Naive Bayes model scores your
-          text. The cloud shows 500 simulated runs of Story 3.
+          Start Story 3 and make some choices to see NB model predictions here.
         </p>
       )}
-
       <div className="viz_canvas_wrapper">
         <Canvas camera={{ position: [5, 6, 5], fov: 45 }}>
           <OrbitControls
@@ -327,7 +329,7 @@ export default function NBVizPanel({
               : snapshot.nbTopTokens}
           </div>
         </div>
-      )}
+      )}{" "}
       <p className="viz_footer_note">
         Typing:{" "}
         <strong>

@@ -130,6 +130,9 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   // 👇 NEW: snapshot of NB breakdown for the viz for Story 3 only
   const [NBSnapshot, setNBSnapshot] = useState(null);
 
+  // 👇 which viz to show for Story 3: "heuristic" | "nb"
+  const [vizMode, setVizMode] = useState("heuristic");
+
   const step = story.steps[stepIndex] ?? null;
 
   // Reset when story changes
@@ -144,6 +147,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setNbResult(null);
     setHeuristicSnapshot(null); // 👈 NEW
     setNBSnapshot(null); // 👈 NEW
+    setVizMode("heuristic"); // 👈 reset toggle
     // setChoiceImages([]);
   }, [story]);
 
@@ -351,6 +355,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setNbResult(null);
     setHeuristicSnapshot(null); // 👈 NEW
     setNBSnapshot(null); // 👈 clear NB viz state too
+    setVizMode("heuristic"); // 👈 reset toggle
     //setChoiceImages([]);
   }, [story]);
 
@@ -419,24 +424,42 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           </button>
         </div>
 
-        {/* 👇 NEW: desktop-only heuristic viz placeholder */}
-        <UnhingedVizPanel
-          snapshot={heuristicSnapshot}
-          typingPaused={waitingForChoice}
-          currentStoryId={story.id}
-          historicalRuns={HISTORICAL_RUNS[story.id] || []}
-          totalSteps={story.steps?.length ?? 0}
-        />
-        {/* 👇 NEW: desktop-only NB viz for Story 3 only */}
-        {story.id === "story3_crunchy_video_game" && (
-          <NBVizPanel
-            snapshot={NBSnapshot}
-            typingPaused={waitingForChoice}
-            currentStoryId={story.id}
-            historicalRuns={NB_HISTORICAL_RUNS[story.id] || []}
-            totalSteps={story.steps?.length ?? 0}
-          />
-        )}
+        {/* 👇 Viz wrapper with toggle (Story 3 only shows button) */}
+        <section className="viz_switch_wrapper">
+          {story.id === "story3_crunchy_video_game" && (
+            <button
+              type="button"
+              className="viz_switch_btn"
+              onClick={() =>
+                setVizMode((prev) =>
+                  prev === "heuristic" ? "nb" : "heuristic",
+                )
+              }
+            >
+              {vizMode === "heuristic"
+                ? "Naive Bayes model"
+                : "Heuristic model"}
+            </button>
+          )}
+
+          {story.id === "story3_crunchy_video_game" && vizMode === "nb" ? (
+            <NBVizPanel
+              snapshot={NBSnapshot}
+              typingPaused={waitingForChoice}
+              currentStoryId={story.id}
+              historicalRuns={NB_HISTORICAL_RUNS[story.id] || []}
+              totalSteps={story.steps?.length ?? 0}
+            />
+          ) : (
+            <UnhingedVizPanel
+              snapshot={heuristicSnapshot}
+              typingPaused={waitingForChoice}
+              currentStoryId={story.id}
+              historicalRuns={HISTORICAL_RUNS[story.id] || []}
+              totalSteps={story.steps?.length ?? 0}
+            />
+          )}
+        </section>
 
         <div className="menu_section">
           <p className="btn_select_title">Story Select</p>

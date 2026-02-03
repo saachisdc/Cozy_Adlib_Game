@@ -212,6 +212,7 @@ function CurrentRunScene({
           color="#a855f7"
           anchorX="center"
           anchorY="bottom"
+          rotation={[0, Math.PI / 4, 0]}
         >
           weird hits
         </Text>
@@ -258,24 +259,25 @@ export default function UnhingedVizPanel({
 
   return (
     <section className="viz_container">
-      <h2 className="viz_title">Heuristic Explorer (WIP)</h2>
+      <h2 className="viz_title">Heuristic Explorer</h2>
       <p className="viz_subtitle">
         This panel shows a 3D point for your current run based on cozy, weird
-        and self-aware hits.
+        and self-aware hits. The color indicates how many wrong choices were
+        made. The size indicates total number of word hits.
       </p>
 
       {hasSnapshot ? (
         <div className="viz_stats">
           <div className="viz_stats_row">
-            <span>Cozy hits</span>
+            <span>Cozy word hits</span>
             <span>{snapshot.cozyHits}</span>
           </div>
           <div className="viz_stats_row">
-            <span>Weird hits</span>
+            <span>Weird word hits</span>
             <span>{snapshot.weirdHits}</span>
           </div>
           <div className="viz_stats_row">
-            <span>Self-aware hits</span>
+            <span>Self-aware word hits</span>
             <span>{snapshot.selfAwareHits}</span>
           </div>
           <div className="viz_stats_row">
