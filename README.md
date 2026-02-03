@@ -233,6 +233,40 @@ Comparison script that generates simulation CSV to compare heuristic scoring vs 
 
 ---
 
+## Data Visualization Panels
+
+**Data Visualization Panels:** 
+
+The game includes interactive 3D data visualization panels that are visible in desktop mode, providing real-time insights into the story's "vibe" based on user choices. These panels use WebGL via React Three Fiber to render dynamic 3D scenes, making the machine learning predictions tangible and engaging.
+
+**Files:**
+
+### `UnhingedVizPanel.jsx`
+The heuristic visualization panel for Stories 1-3. Displays a 3D point cloud where each point represents a simulated or live story run. The position is determined by "cozy", "weird", and "self-aware" signal hits from the heuristic scoring system. Color indicates the ratio of wrong choices (blue for all correct, red for all wrong). Size reflects total signal hits. Historical runs appear as faint background spheres, while the current run animates as a bright point.
+
+### `NBVizPanel.jsx`
+The Naive Bayes visualization panel, active for Story 3. Similar 3D layout but positioned based on NB model probabilities for "wholesome", "kinda odd", and "totally unhinged" labels. Sphere size indicates model confidence (max probability). Includes stats display for probabilities and wrong choices, plus top signal tokens from the NB model.
+
+**Technologies:**
+
+- React Three Fiber (@react-three/fiber): Declarative React renderer for Three.js, enabling 3D scenes in React components.
+- React Three Drei (@react-three/drei): Utility components like OrbitControls, Text, and Html for camera controls, 3D text, and overlays.
+- Three.js: Underlying WebGL library for 3D graphics (implicitly used via R3F).
+
+**Features:**
+
+- Real-time Animation: Points smoothly interpolate to new positions as the user makes choices.
+- Real-time signal update: signals (hit words and tokens) that impact the model are listed and updated as the user makes choices.
+- Historical Context: Background clouds of simulated runs (from CSV data processed into JSON) provide comparison.
+- Responsive Design: Panels are hidden on mobile to prioritize gameplay; only visible on desktop screens.
+- Interactive Camera: Users can rotate the 3D view with mouse controls (zoom/pan disabled for simplicity).
+- Color Coding: Gradient from blue (perfect score) to red (all wrong choices) for intuitive feedback.
+- Data Sources: Historical runs loaded from src/simulated_runs/ JSON files, generated from CSV via scripts like scripts/csv_to_runs_json.js and scripts/csv_to_runs_json_with_nb.js.
+
+These visualizations bridge the gap between abstract ML predictions and user experience, allowing players to see how their choices shape the story's trajectory in a visual, exploratory way. The panels update live during Story 3, showing both heuristic and NB perspectives side-by-side.
+
+---
+
 ## Running the Project
 
 ```bash
