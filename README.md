@@ -119,6 +119,8 @@ Core game logic and state management.
 - Controls when the typewriter pauses and resumes
 - Tracks which step of the story the user is on
 - Replaces placeholders with selected choices (word and images)
+- Updates data viz panels as user makes selected choices (if on desktop)
+- Allows user to toggle between heuristic and ML data viz panels (if on Story 3)
 - Selects the final story ending based on score
 - Updates scores and labels and, if applicable, if heuristic and ml model scores matched
 
