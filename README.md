@@ -15,6 +15,7 @@ Generative AI was NOT used for the images; these were modelled and rendered by m
 - Keep the app **static and easily shareable** (no backend required, no downloading or saved data, no 3D models)
 - Explore beginner-friendly approaches to heuristic scoring and machine learning logic in JavaScript
 - Create enough training data from Stories 1 and 2 for a Naive Bayes ML model to predict Story 3's "vibe"
+- JAN 2026 Update: added 3D data viz panel for both heuristic model (for all stories) and Naive Bayes ML model (for story 3 only) in desktop version
 
 ---
 
@@ -24,7 +25,7 @@ Generative AI was NOT used for the images; these were modelled and rendered by m
 2. At certain points, the text pauses and shows a placeholder (`...choose a button below...`).
 3. The user selects one of three word choice buttons.
 4. The placeholder is replaced with the chosen word, and the story continues based on that word using randomized branch inserts.
-5. For each word selected, an image shows up on the left or right of the screen near the chosen word.
+5. For each word selected, an image shows up on the left or right of the screen near the chosen word, and in desktop, the viz panel updates
 6. For each story, there are 1,728 slightly different stories that can be generated.
 7. At the end, the story’s final line can change based on how many “correct” choices were made.
 8. The game tracks which choices the user made, and a model checks if the branches created included "wholesome", "kinda odd", or "totally unhinged" words.
@@ -54,12 +55,6 @@ scripts/
 └── simulate_story_runs_with_nb.js
 └── simulate_story_runs.js
 └── train_nb.js
-simulated_runs/
-└── runs_story1_baked_mittens.csv
-└── runs_story2_magical_campfire_with_nb.csv
-└── runs_story2_magical_campfire.csv
-└── runs_story3_crunchy_video_game_with_nb.csv
-└── runs_story3_crunchy_video_game.csv
 src/
 ├── components/
 │   └── Game.jsx
@@ -69,13 +64,27 @@ src/
 │   └── Story3CrunchyVideoGame.js
 │   └── tmptestunhingedscore.js
 │   └── UnhingedScore.js
+│   └── NBVizPanel.jsx
+│   └── UnhingedVizPanel.jsx
 ├── ml/
 │   └── nb.js
 ├── models/
 │   └── nb_model.json
+├──simulated_runs/
+│   └── runs_story1_baked_mittens.csv
+│   └── runs_story2_magical_campfire_with_nb.csv
+│   └── runs_story2_magical_campfire.csv
+│   └── runs_story3_crunchy_video_game_with_nb.csv
+│   └── runs_story3_crunchy_video_game.csv
+│   └── runs_story1_baked_mittens.json
+│   └── runs_story2_magical_campfire_with_nb.json
+│   └── runs_story2_magical_campfire.json
+│   └── runs_story3_crunchy_video_game_with_nb.json
+│   └── runs_story3_crunchy_video_game.json
 ├── styles/
 │   └── components/
 │       └── storylayout.css
+│       └── unhingedviz.css
 │   └── global.css
 │   └── modern-normalize.css
 │   └── utility.css
