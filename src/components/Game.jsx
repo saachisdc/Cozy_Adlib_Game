@@ -9,6 +9,7 @@ import React, {
 
 import Typewriter from "./Typewriter";
 import UnhingedVizPanel from "./UnhingedVizPanel";
+import NBVizPanel from "./NBVizPanel";
 
 import Story1BakedMittens from "./Story1BakedMittens";
 import Story2MagicalCampfire from "./Story2MagicalCampfire";
@@ -17,10 +18,11 @@ import Story3CrunchyVideoGame from "./Story3CrunchyVideoGame";
 import runsStory1 from "../simulated_runs/runs_story1_baked_mittens.json";
 import runsStory2 from "../simulated_runs/runs_story2_magical_campfire.json";
 import runsStory3 from "../simulated_runs/runs_story3_crunchy_video_game.json";
+import runsStory3WithNB from "../simulated_runs/runs_story3_crunchy_video_game_with_nb.json";
 
 import { computeUnhingedScore } from "./UnhingedScore";
 import nbModel from "../models/nb_model.json";
-import { predictVibe } from "../ml/nb";
+import { predictVibe, topContributingTokens } from "../ml/nb";
 
 import "/styles/modern-normalize.css";
 import "/styles/global.css";
@@ -82,6 +84,10 @@ const HISTORICAL_RUNS = {
   story3_crunchy_video_game: runsStory3,
 };
 
+const NB_HISTORICAL_RUNS = {
+  story3_crunchy_video_game: runsStory3WithNB,
+};
+
 export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   // 👇 Current active story
   const [story, setStory] = useState(initialStory);
@@ -114,11 +120,15 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   const [showUnhinged, setShowUnhinged] = useState(false);
   // unhingedResult will become { score, label, breakdown } at the end
   const [nbResult, setNbResult] = useState(null);
+
   // For restarting Typewriter internal state cleanly
   const [resetSignal, setResetSignal] = useState(0);
 
   // 👇 NEW: snapshot of heuristic breakdown for the viz
   const [heuristicSnapshot, setHeuristicSnapshot] = useState(null);
+
+  // 👇 NEW: snapshot of NB breakdown for the viz for Story 3 only
+  const [NBSnapshot, setNBSnapshot] = useState(null);
 
   const step = story.steps[stepIndex] ?? null;
 
@@ -133,6 +143,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setShowUnhinged(false);
     setNbResult(null);
     setHeuristicSnapshot(null); // 👈 NEW
+    setNBSnapshot(null); // 👈 NEW
     // setChoiceImages([]);
   }, [story]);
 
@@ -167,11 +178,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
         return `\n\n[[IMG:${id}:${align}]]\n\n`;
       }
 
-      // Decide where the image should go for THIS choice
-      // (alternate left/right by step index — simple + stable)
       const align = stepIndex % 2 === 0 ? "left" : "right";
-
-      // Only insert an image token if this choice has an image
       const imgInsert = choice?.image ? imgToken(choiceId, align) : "";
 
       const prefix = step.afterChoicePrefix ?? "";
@@ -183,11 +190,12 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
 
       const totalSteps = story.steps?.length ?? 0;
       const isLast = stepIndex === totalSteps - 1;
-      const stepsSoFar = stepIndex + 1; // after this click
+      const stepsSoFar = stepIndex + 1;
 
       setStoryText((prev) => {
         const replaced = replaceLast(prev, PLACEHOLDER, label);
 
+        // 👉 LAST STEP
         if (isLast) {
           const chosenEnding =
             story.endings?.[newScore] ??
@@ -201,31 +209,40 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           const result = computeUnhingedScore({
             storyText: finalText,
             correctCount: newScore,
-            totalSteps, // full story used for final score
+            totalSteps,
             modelConfig: story.unhingedModel,
           });
 
-          // 👇 NEW: At the end, stepsSoFar === totalSteps, so this matches breakdown.wrongChoices
-          const wrongChoicesSoFar = totalSteps - newScore;
-
-          // 👇 NEW: store breakdown for the viz
           setHeuristicSnapshot({
             cozyHits: result.breakdown.cozyHits,
             weirdHits: result.breakdown.weirdHits,
             selfAwareHits: result.breakdown.selfAwareHits,
             wrongChoices: result.breakdown.wrongChoices,
-            totalSteps, // full denominator for display
+            totalSteps,
           });
+
+          if (story.id === "story3_crunchy_video_game") {
+            const nb = predictVibe(finalText, nbModel);
+            setNbResult(nb);
+
+            // 👉 explainability: top contributing tokens
+            const top = topContributingTokens(finalText, nbModel, 8);
+            const tokenList = top.map((t) => t.token); // just the words
+
+            setNBSnapshot({
+              nbProbWholesome: nb.probs.wholesome,
+              nbProbKindaOdd: nb.probs["kinda odd"],
+              nbProbTotallyUnhinged: nb.probs["totally unhinged"],
+              wrongChoices: result.breakdown.wrongChoices,
+              nbTopTokens: tokenList,
+            });
+          } else {
+            setNbResult(null);
+            setNBSnapshot(null);
+          }
 
           setShowUnhinged(false);
           setUnhingedResult(result);
-
-          const nb =
-            story.id === "story3_crunchy_video_game"
-              ? predictVibe(finalText, nbModel)
-              : null;
-
-          setNbResult(nb);
 
           return (
             finalText +
@@ -233,25 +250,44 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           );
         }
 
-        // 👇 NON-LAST branch: partial score
+        // 👉 NON-LAST STEP – partial heuristic + optional partial NB
         const nextText = replaced + prefix + imgInsert + branchInsert + after;
 
-        // Score based only on steps we've actually taken so far
         const partialResult = computeUnhingedScore({
           storyText: nextText,
           correctCount: newScore,
-          totalSteps: stepsSoFar, // 👈 only the answered steps
+          totalSteps: stepsSoFar,
           modelConfig: story.unhingedModel,
         });
+
         const wrongChoicesSoFar = stepsSoFar - newScore;
 
         setHeuristicSnapshot({
           cozyHits: partialResult.breakdown.cozyHits,
           weirdHits: partialResult.breakdown.weirdHits,
           selfAwareHits: partialResult.breakdown.selfAwareHits,
-          wrongChoices: wrongChoicesSoFar, // 👈 this is what you show
-          totalSteps, // 👈 still show /3 for Story 1
+          wrongChoices: wrongChoicesSoFar,
+          totalSteps,
         });
+
+        // 👇 NEW: live NB viz for Story 3
+        if (story.id === "story3_crunchy_video_game") {
+          const nbPartial = predictVibe(nextText, nbModel);
+          setNbResult(nbPartial);
+
+          const topPartial = topContributingTokens(nextText, nbModel, 8);
+          const tokenListPartial = topPartial.map((t) => t.token);
+
+          setNBSnapshot({
+            nbProbWholesome: nbPartial.probs.wholesome,
+            nbProbKindaOdd: nbPartial.probs["kinda odd"],
+            nbProbTotallyUnhinged: nbPartial.probs["totally unhinged"],
+            wrongChoices: wrongChoicesSoFar,
+            nbTopTokens: tokenListPartial,
+          });
+        } else {
+          setNBSnapshot(null);
+        }
 
         return nextText;
       });
@@ -314,6 +350,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setShowUnhinged(false);
     setNbResult(null);
     setHeuristicSnapshot(null); // 👈 NEW
+    setNBSnapshot(null); // 👈 clear NB viz state too
     //setChoiceImages([]);
   }, [story]);
 
@@ -390,6 +427,16 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           historicalRuns={HISTORICAL_RUNS[story.id] || []}
           totalSteps={story.steps?.length ?? 0}
         />
+        {/* 👇 NEW: desktop-only NB viz for Story 3 only */}
+        {story.id === "story3_crunchy_video_game" && (
+          <NBVizPanel
+            snapshot={NBSnapshot}
+            typingPaused={waitingForChoice}
+            currentStoryId={story.id}
+            historicalRuns={NB_HISTORICAL_RUNS[story.id] || []}
+            totalSteps={story.steps?.length ?? 0}
+          />
+        )}
 
         <div className="menu_section">
           <p className="btn_select_title">Story Select</p>
