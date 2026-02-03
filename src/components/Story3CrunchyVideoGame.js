@@ -198,6 +198,7 @@ export const Story3CrunchyVideoGame = {
       "hummed happily",
       "warm disc",
       "sweet and comforting",
+      "warmth settle",
     ],
 
     selfAwareWords: [
@@ -216,6 +217,7 @@ export const Story3CrunchyVideoGame = {
       "still yummy though",
       "admitting my mistake",
       "life choices so far",
+      "sharp and unsatisfying",
     ],
 
     // These numbers control how much each feature matters.

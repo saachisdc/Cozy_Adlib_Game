@@ -1,0 +1,170 @@
+/* Hidden by default (mobile); we'll show it on desktop only */
+.viz_container {
+  display: none;
+}
+.viz_switch_wrapper {
+  display: none;
+}
+
+/* Desktop-only viz */
+@media (min-width: 1024px) {
+  .viz_container {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.75rem 0.85rem 0.85rem;
+    border-radius: 10px;
+    background: var(--colour-background);
+    color: var(--colour-primary);
+    font-size: var(--size-xs);
+    box-shadow: 0 8px 10px rgba(15, 23, 42, 0.45);
+  }
+
+  .viz_canvas_wrapper {
+    margin-top: 0.75rem;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--colour-background);
+    outline: var(--colour-accent) solid 1px;
+  }
+
+  .viz_canvas_wrapper canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+
+  /* Toggle button in the top-right of the viz card */
+  .viz_switch_btn {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.8rem;
+    padding: 0.2rem 0.65rem;
+    font-size: var(--size-xs);
+    line-height: 1.2;
+    border-radius: 999px;
+    outline: 1px solid var(--colour-text);
+    background: var(--colour-backgound);
+    color: var(--colour-text);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.1);
+  }
+
+  .viz_switch_btn:hover {
+    background: var(--colour-text);
+    color: var(--colour-background);
+  }
+
+  .viz_switch_btn:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+  }
+
+  /* Wrapper so the toggle button can float above the viz card */
+  .viz_switch_wrapper {
+    display: block;
+    position: relative;
+  }
+  .viz_title {
+    margin: 0 0 0.25rem;
+    font-size: var(--size-sm);
+  }
+
+  .viz_subtitle {
+    margin: 0 0 0.75rem;
+    font-size: var(--size-xs);
+    color: var(--colour-text);
+  }
+
+  .viz_stats {
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    background: var(--colour-accent);
+    padding: 0.4rem 0.6rem;
+  }
+
+  .viz_stats_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.15rem 0;
+  }
+
+  .viz_stats_row span:first-child {
+    font-size: 0.75rem;
+  }
+
+  .viz_stats_row span:last-child {
+    font-weight: 600;
+  }
+
+  .viz_hint {
+    margin: 0 0 0.5rem;
+    font-size: var(--size-xs);
+    color: var(--colour-primary);
+  }
+  .viz_hint_mouse {
+    margin: 1rem 1rem 0.5rem;
+    font-size: var(--size-xxs);
+    color: var(--colour-primary);
+  }
+
+  .viz_nb_tokens,
+  .viz_tokens_group {
+    font-size: var(--size-xs);
+    color: var(--colour-primary);
+  }
+
+  .viz_nb_tokens_label,
+  .viz_tokens_label {
+    font-style: italic;
+    opacity: 0.7;
+  }
+
+  .viz_nb_tokens_list,
+  .viz_tokens_list {
+    line-height: 1.3;
+    word-break: break-word;
+    margin-bottom: 0.2rem;
+  }
+
+  .viz_footer_note {
+    margin: 0;
+    font-size: var(--size-xs);
+    color: var(--colour-text);
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .viz_canvas_wrapper {
+    height: 220px;
+  }
+  .viz_title {
+    font-size: var(--size-base);
+  }
+
+  .viz_subtitle,
+  .viz_hint,
+  .viz_footer_note {
+    font-size: var(--size-sm);
+  }
+  .viz_hint_mouse {
+    font-size: var(--size-xs);
+  }
+}
+/* 2xl */
+@media (min-width: 1536px) {
+  .viz_canvas_wrapper {
+    height: 300px;
+  }
+  .viz_title {
+    font-size: var(--size-lg);
+  }
+
+  .viz_subtitle,
+  .viz_hint,
+  .viz_footer_note {
+    font-size: var(--size-base);
+  }
+}

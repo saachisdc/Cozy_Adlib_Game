@@ -1,0 +1,1402 @@
+[
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0018,
+    "nbProbTotallyUnhinged": 0.9982,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 0,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0001,
+    "nbProbTotallyUnhinged": 0.9999,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0014,
+    "nbProbTotallyUnhinged": 0.9986,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 0,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9991,
+    "nbProbTotallyUnhinged": 0.0009,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0002,
+    "nbProbTotallyUnhinged": 0.9998,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.998,
+    "nbProbTotallyUnhinged": 0.002,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 0,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0001,
+    "nbProbTotallyUnhinged": 0.9999,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9999,
+    "nbProbTotallyUnhinged": 0.0001,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9998,
+    "nbProbTotallyUnhinged": 0.0002,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0001,
+    "nbProbTotallyUnhinged": 0.9999,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0008,
+    "nbProbTotallyUnhinged": 0.9992,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.4268,
+    "nbProbTotallyUnhinged": 0.5732,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 0,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0005,
+    "nbProbTotallyUnhinged": 0.9995,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 0,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9999,
+    "nbProbTotallyUnhinged": 0.0001,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0247,
+    "nbProbTotallyUnhinged": 0.9753,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9338,
+    "nbProbTotallyUnhinged": 0.0662,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9999,
+    "nbProbTotallyUnhinged": 0.0001,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0001,
+    "nbProbTotallyUnhinged": 0.9999,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9544,
+    "nbProbTotallyUnhinged": 0.0456,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 0,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 0,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9928,
+    "nbProbTotallyUnhinged": 0.0072,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.6247,
+    "nbProbTotallyUnhinged": 0.3753,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9989,
+    "nbProbTotallyUnhinged": 0.0011,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9758,
+    "nbProbTotallyUnhinged": 0.0242,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.5078,
+    "nbProbTotallyUnhinged": 0.4922,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9991,
+    "nbProbTotallyUnhinged": 0.0009,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0004,
+    "nbProbTotallyUnhinged": 0.9996,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.2932,
+    "nbProbTotallyUnhinged": 0.7068,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0008,
+    "nbProbTotallyUnhinged": 0.9992,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9052,
+    "nbProbTotallyUnhinged": 0.0948,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.9958,
+    "nbProbTotallyUnhinged": 0.0042,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.4268,
+    "nbProbTotallyUnhinged": 0.5732,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0022,
+    "nbProbTotallyUnhinged": 0.9978,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 0,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0003,
+    "nbProbTotallyUnhinged": 0.9997,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.5627,
+    "nbProbTotallyUnhinged": 0.4373,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0538,
+    "nbProbTotallyUnhinged": 0.9462,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0.0022,
+    "nbProbTotallyUnhinged": 0.9978,
+    "wrongChoices": 2,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 1,
+    "wrongChoices": 3,
+    "nbLabel": "totally unhinged"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 0,
+    "nbProbKindaOdd": 1,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 2,
+    "nbLabel": "kinda odd"
+  },
+  {
+    "nbProbWholesome": 1,
+    "nbProbKindaOdd": 0,
+    "nbProbTotallyUnhinged": 0,
+    "wrongChoices": 1,
+    "nbLabel": "wholesome"
+  }
+]

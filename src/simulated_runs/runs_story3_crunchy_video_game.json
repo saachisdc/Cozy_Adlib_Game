@@ -1,0 +1,3502 @@
+[
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 4,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 6,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 4,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 4,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 3,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 6,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 4,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 4,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 4,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 4,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 5,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 4,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 4,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 4,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 4,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 5,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 4,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 6,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 4,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 4,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 3,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 3,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 3,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 4,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 4,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 4,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 4,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 4,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 4,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 5,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 5,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 4,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 4,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 4,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 4,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 4,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 4,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 4,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 4,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 4,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 5,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 5,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 4,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 5,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 4,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 6,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 3,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 5,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 2,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 0,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 0,
+    "selfAwareHits": 3,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 3,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 4,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 2,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 0,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 1,
+    "selfAwareHits": 2,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "kinda odd"
+  },
+  {
+    "cozyHits": 0,
+    "weirdHits": 3,
+    "selfAwareHits": 1,
+    "wrongChoices": 3,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 2,
+    "weirdHits": 2,
+    "selfAwareHits": 1,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 1,
+    "weirdHits": 1,
+    "selfAwareHits": 4,
+    "wrongChoices": 2,
+    "label": "totally unhinged"
+  },
+  {
+    "cozyHits": 3,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 0,
+    "selfAwareHits": 0,
+    "wrongChoices": 0,
+    "label": "wholesome"
+  },
+  {
+    "cozyHits": 4,
+    "weirdHits": 3,
+    "selfAwareHits": 0,
+    "wrongChoices": 1,
+    "label": "kinda odd"
+  }
+]

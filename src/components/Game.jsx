@@ -6,15 +6,23 @@ import React, {
   useState,
   useRef,
 } from "react";
+
 import Typewriter from "./Typewriter";
+import UnhingedVizPanel from "./UnhingedVizPanel";
+import NBVizPanel from "./NBVizPanel";
 
 import Story1BakedMittens from "./Story1BakedMittens";
 import Story2MagicalCampfire from "./Story2MagicalCampfire";
 import Story3CrunchyVideoGame from "./Story3CrunchyVideoGame";
 
+import runsStory1 from "../simulated_runs/runs_story1_baked_mittens.json";
+import runsStory2 from "../simulated_runs/runs_story2_magical_campfire.json";
+import runsStory3 from "../simulated_runs/runs_story3_crunchy_video_game.json";
+import runsStory3WithNB from "../simulated_runs/runs_story3_crunchy_video_game_with_nb.json";
+
 import { computeUnhingedScore } from "./UnhingedScore";
 import nbModel from "../models/nb_model.json";
-import { predictVibe } from "../ml/nb";
+import { predictVibe, topContributingTokens } from "../ml/nb";
 
 import "/styles/modern-normalize.css";
 import "/styles/global.css";
@@ -70,6 +78,16 @@ const STORIES = [
   Story3CrunchyVideoGame,
 ];
 
+const HISTORICAL_RUNS = {
+  story1_baked_mittens: runsStory1,
+  story2_magical_campfire: runsStory2,
+  story3_crunchy_video_game: runsStory3,
+};
+
+const NB_HISTORICAL_RUNS = {
+  story3_crunchy_video_game: runsStory3WithNB,
+};
+
 export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   // 👇 Current active story
   const [story, setStory] = useState(initialStory);
@@ -102,8 +120,18 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
   const [showUnhinged, setShowUnhinged] = useState(false);
   // unhingedResult will become { score, label, breakdown } at the end
   const [nbResult, setNbResult] = useState(null);
+
   // For restarting Typewriter internal state cleanly
   const [resetSignal, setResetSignal] = useState(0);
+
+  // 👇 NEW: snapshot of heuristic breakdown for the viz
+  const [heuristicSnapshot, setHeuristicSnapshot] = useState(null);
+
+  // 👇 NEW: snapshot of NB breakdown for the viz for Story 3 only
+  const [NBSnapshot, setNBSnapshot] = useState(null);
+
+  // 👇 which viz to show for Story 3: "heuristic" | "nb"
+  const [vizMode, setVizMode] = useState("heuristic");
 
   const step = story.steps[stepIndex] ?? null;
 
@@ -117,6 +145,9 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setUnhingedResult(null);
     setShowUnhinged(false);
     setNbResult(null);
+    setHeuristicSnapshot(null); // 👈 NEW
+    setNBSnapshot(null); // 👈 NEW
+    setVizMode("heuristic"); // 👈 reset toggle
     // setChoiceImages([]);
   }, [story]);
 
@@ -151,11 +182,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
         return `\n\n[[IMG:${id}:${align}]]\n\n`;
       }
 
-      // Decide where the image should go for THIS choice
-      // (alternate left/right by step index — simple + stable)
       const align = stepIndex % 2 === 0 ? "left" : "right";
-
-      // Only insert an image token if this choice has an image
       const imgInsert = choice?.image ? imgToken(choiceId, align) : "";
 
       const prefix = step.afterChoicePrefix ?? "";
@@ -165,12 +192,14 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
       const wasCorrect = !!step.correct && step.correct === choiceId;
       const newScore = score + (wasCorrect ? 1 : 0);
 
-      const isLast = stepIndex === (story.steps?.length ?? 0) - 1;
-      const total = story.steps?.length ?? 0;
+      const totalSteps = story.steps?.length ?? 0;
+      const isLast = stepIndex === totalSteps - 1;
+      const stepsSoFar = stepIndex + 1;
 
       setStoryText((prev) => {
         const replaced = replaceLast(prev, PLACEHOLDER, label);
 
+        // 👉 LAST STEP
         if (isLast) {
           const chosenEnding =
             story.endings?.[newScore] ??
@@ -184,33 +213,103 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           const result = computeUnhingedScore({
             storyText: finalText,
             correctCount: newScore,
-            totalSteps: total,
+            totalSteps,
             modelConfig: story.unhingedModel,
           });
+
+          setHeuristicSnapshot({
+            cozyHits: result.breakdown.cozyHits,
+            weirdHits: result.breakdown.weirdHits,
+            selfAwareHits: result.breakdown.selfAwareHits,
+            wrongChoices: result.breakdown.wrongChoices,
+            totalSteps,
+            // 👇 NEW
+            cozyHitWords: result.breakdown.cozyHitWords,
+            weirdHitWords: result.breakdown.weirdHitWords,
+            selfAwareHitWords: result.breakdown.selfAwareHitWords,
+          });
+
+          if (story.id === "story3_crunchy_video_game") {
+            const nb = predictVibe(finalText, nbModel);
+            setNbResult(nb);
+
+            // 👉 explainability: top contributing tokens
+            const top = topContributingTokens(finalText, nbModel, 8);
+            const tokenList = top.map((t) => t.token); // just the words
+
+            setNBSnapshot({
+              nbProbWholesome: nb.probs.wholesome,
+              nbProbKindaOdd: nb.probs["kinda odd"],
+              nbProbTotallyUnhinged: nb.probs["totally unhinged"],
+              wrongChoices: result.breakdown.wrongChoices,
+              nbTopTokens: tokenList,
+            });
+          } else {
+            setNbResult(null);
+            setNBSnapshot(null);
+          }
 
           setShowUnhinged(false);
           setUnhingedResult(result);
 
-          const nb =
-            story.id === "story3_crunchy_video_game"
-              ? predictVibe(finalText, nbModel)
-              : null;
-
-          setNbResult(nb);
-
           return (
-            finalText + ` \n\nYou got ${newScore}/${total} choices correct.`
+            finalText +
+            ` \n\nYou got ${newScore}/${totalSteps} choices correct.`
           );
         }
 
-        return replaced + prefix + imgInsert + branchInsert + after;
+        // 👉 NON-LAST STEP – partial heuristic + optional partial NB
+        const nextText = replaced + prefix + imgInsert + branchInsert + after;
+
+        const partialResult = computeUnhingedScore({
+          storyText: nextText,
+          correctCount: newScore,
+          totalSteps: stepsSoFar,
+          modelConfig: story.unhingedModel,
+        });
+
+        const wrongChoicesSoFar = stepsSoFar - newScore;
+
+        setHeuristicSnapshot({
+          cozyHits: partialResult.breakdown.cozyHits,
+          weirdHits: partialResult.breakdown.weirdHits,
+          selfAwareHits: partialResult.breakdown.selfAwareHits,
+          wrongChoices: wrongChoicesSoFar,
+          totalSteps,
+
+          // 👇 NEW
+          cozyHitWords: partialResult.breakdown.cozyHitWords,
+          weirdHitWords: partialResult.breakdown.weirdHitWords,
+          selfAwareHitWords: partialResult.breakdown.selfAwareHitWords,
+        });
+
+        // 👇 NEW: live NB viz for Story 3
+        if (story.id === "story3_crunchy_video_game") {
+          const nbPartial = predictVibe(nextText, nbModel);
+          setNbResult(nbPartial);
+
+          const topPartial = topContributingTokens(nextText, nbModel, 8);
+          const tokenListPartial = topPartial.map((t) => t.token);
+
+          setNBSnapshot({
+            nbProbWholesome: nbPartial.probs.wholesome,
+            nbProbKindaOdd: nbPartial.probs["kinda odd"],
+            nbProbTotallyUnhinged: nbPartial.probs["totally unhinged"],
+            wrongChoices: wrongChoicesSoFar,
+            nbTopTokens: tokenListPartial,
+          });
+        } else {
+          setNBSnapshot(null);
+        }
+
+        return nextText;
       });
 
       setWaitingForChoice(false);
       setStepIndex((i) => i + 1);
       setScore(newScore);
     },
-    [step, score, stepIndex, story]
+    [step, score, stepIndex, story],
   );
 
   useEffect(() => {
@@ -263,6 +362,9 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
     setUnhingedResult(null);
     setShowUnhinged(false);
     setNbResult(null);
+    setHeuristicSnapshot(null); // 👈 NEW
+    setNBSnapshot(null); // 👈 clear NB viz state too
+    setVizMode("heuristic"); // 👈 reset toggle
     //setChoiceImages([]);
   }, [story]);
 
@@ -331,8 +433,45 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           </button>
         </div>
 
+        {/* 👇 Viz wrapper with toggle (Story 3 only shows button) */}
+        <section className="viz_switch_wrapper">
+          {story.id === "story3_crunchy_video_game" && (
+            <button
+              type="button"
+              className="viz_switch_btn"
+              onClick={() =>
+                setVizMode((prev) =>
+                  prev === "heuristic" ? "nb" : "heuristic",
+                )
+              }
+            >
+              {vizMode === "heuristic"
+                ? "Naive Bayes model"
+                : "Heuristic model"}
+            </button>
+          )}
+
+          {story.id === "story3_crunchy_video_game" && vizMode === "nb" ? (
+            <NBVizPanel
+              snapshot={NBSnapshot}
+              typingPaused={waitingForChoice}
+              currentStoryId={story.id}
+              historicalRuns={NB_HISTORICAL_RUNS[story.id] || []}
+              totalSteps={story.steps?.length ?? 0}
+            />
+          ) : (
+            <UnhingedVizPanel
+              snapshot={heuristicSnapshot}
+              typingPaused={waitingForChoice}
+              currentStoryId={story.id}
+              historicalRuns={HISTORICAL_RUNS[story.id] || []}
+              totalSteps={story.steps?.length ?? 0}
+            />
+          )}
+        </section>
+
         <div className="menu_section">
-          <p>Story Select</p>
+          <p className="btn_select_title">Story Select</p>
           <div className="story_select_btns">
             <button className="btn game_btn" onClick={selectStory1}>
               Story 1
@@ -385,10 +524,10 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
 
             {/* Optional debug info while you’re tuning */}
             <div className="score_panel_breakdown">
-              wrongChoices: {unhingedResult.breakdown.wrongChoices} | weirdHits:{" "}
-              {unhingedResult.breakdown.weirdHits} | cozyHits:{" "}
-              {unhingedResult.breakdown.cozyHits} | selfAwareHits:{" "}
-              {unhingedResult.breakdown.selfAwareHits}
+              cozyHits: {unhingedResult.breakdown.cozyHits} | weirdHits:{" "}
+              {unhingedResult.breakdown.weirdHits} | selfAwareHits:{" "}
+              {unhingedResult.breakdown.selfAwareHits} | wrongChoices:{" "}
+              {unhingedResult.breakdown.wrongChoices}
             </div>
 
             {nbResult && (
@@ -422,7 +561,7 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
       </main>
       {/* footer and word choice buttons */}
       <div className="bottom_bar">
-        <p>Word Select</p>
+        <p className="btn_select_title">Word Select</p>
         <div className="word_select_btns">
           {buttons.map((c) => (
             <button
@@ -435,9 +574,27 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             </button>
           ))}
           {/* story restart button */}
+          <span className="word_select_or">or</span>
           <button className="btn game_btn" onClick={restart}>
             restart
           </button>
+        </div>
+        <div className="menu_section_desktop">
+          <p className="btn_select_title">Story Select</p>
+          <div className="story_select_btns">
+            <button className="btn game_btn" onClick={selectStory1}>
+              Story 1
+            </button>
+            <button className="btn game_btn" onClick={selectStory2}>
+              Story 2
+            </button>
+            <button className="btn game_btn" onClick={selectStory3}>
+              Story 3 🤖
+            </button>
+            <button className="btn game_btn" onClick={selectRandomStory}>
+              Random story 🎲
+            </button>
+          </div>
         </div>
       </div>
     </div>

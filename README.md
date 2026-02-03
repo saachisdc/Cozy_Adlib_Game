@@ -1,6 +1,6 @@
 # Cozy Madlab Game
 
-A small, experimental web game built with **React** that lets users build a short story by choosing 1 of 3 words at key moments. The project is intentionally simple and designed as a learning exercise in interactive storytelling, state management, and lightweight scoring logic
+A small, experimental web game built with **React** that lets users build a short story by choosing 1 of 3 words at key moments. The project is intentionally simple and designed as a learning exercise in interactive storytelling, state management, and lightweight scoring logic.
 
 ChatGPT 5.2 was used during ideation, coding the JS and CSS components, providing some text content for the randomized branch inserts, and to understand how to implement machine learning at a small-scale. Feel free to copy and use the code
 
@@ -157,7 +157,7 @@ Calculates the heuristic Unhinged Score and buckets the lables
 
 ## Naive Bayes ML Component Overview
 
-Tiny supervised model that uses Bag-of-Words (unigram) representation to assess the generated text and predict a vibe. Because this is based on vocabulary and not semantics, the output for Story 3 does not trigger the more extreme vibes that were noted by signal words and phrases in the heuristic model. Therefore, the output of the model will most likely be "kinda odd", as exemplified by "(simulated_runs/runs_story2_magical_campfire_with_nb.csv)". 
+Tiny supervised model that uses Bag-of-Words (unigram) representation to assess the generated text and predict a vibe. Because this is based on vocabulary and not semantics, the output for Story 3 does not trigger the more extreme vibes that were noted by signal words and phrases in the heuristic model. Therefore, the output of the model will most likely be "kinda odd", as exemplified by "(simulated_runs/runs_story2_magical_campfire_with_nb.csv)".
 
 ### `simulate_story_runs.js`
 
@@ -177,6 +177,7 @@ Simulate x runs of a specified story and export results to CSV
 Train a Naive Bayes model from simulated story runs
 
 **Responsibilities:**
+
 - analyze 500 runs from Story 1 and 500 runs from Story 2
 - trains NB on generatedText → label
 - output nb_model.json
@@ -206,12 +207,13 @@ Pre-trained model artifact used offline by nb.js for inference
 - converts label log-scores into a normalized probability distribution (softmax)
 - label and the probability are picked up by Game.jsx to surface to user in the score panel
 
-###  `simulate_story_runs_with_nb.js`
+### `simulate_story_runs_with_nb.js`
 
 **Purpose:**
 Comparison script that generates simulation CSV to compare heuristic scoring vs Naive Bayes vibe prediction on the same generated text.
 
 **Responsibilities:**
+
 - Adds NB columns to the usual run output:
   - nbLabel, nbP, per-class probabilities
   - nbTopTokens (optional explainability)

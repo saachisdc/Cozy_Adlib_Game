@@ -11,7 +11,21 @@ function countHits(text, words) {
 
   return hits;
 }
+// NEW: return the actual matched words
+function hitWords(text, words) {
+  const lower = (text || "").toLowerCase();
+  const result = [];
 
+  for (const w of words) {
+    if (!w) continue;
+    const needle = String(w).toLowerCase();
+    if (lower.includes(needle)) {
+      result.push(w); // keep original casing from the list
+    }
+  }
+
+  return result;
+}
 function clamp(n, min, max) {
   return Math.max(min, Math.min(max, n));
 }
@@ -49,9 +63,14 @@ export function computeUnhingedScore({
 
   const wrongChoices = Math.max(0, (totalSteps ?? 0) - (correctCount ?? 0));
 
-  const weirdHits = countHits(storyText, weirdWords);
-  const cozyHits = countHits(storyText, cozyWords);
-  const selfAwareHits = countHits(storyText, selfAwareWords);
+  // NEW: compute both lists and counts
+  const weirdHitWords = hitWords(storyText, weirdWords);
+  const cozyHitWords = hitWords(storyText, cozyWords);
+  const selfAwareHitWords = hitWords(storyText, selfAwareWords);
+
+  const weirdHits = weirdHitWords.length;
+  const cozyHits = cozyHitWords.length;
+  const selfAwareHits = selfAwareHitWords.length;
 
   const raw =
     (w.wrongChoice ?? 2) * wrongChoices +
@@ -74,6 +93,10 @@ export function computeUnhingedScore({
       cozyHits,
       selfAwareHits,
       raw,
+      // NEW: expose the lists so the viz can show them
+      weirdHitWords,
+      cozyHitWords,
+      selfAwareHitWords,
     },
   };
 }
