@@ -323,6 +323,36 @@ export default function UnhingedVizPanel({
           </Html>
         </Canvas>
       </div>
+      {snapshot && (
+        <div className="viz_heuristic_tokens">
+          {snapshot.cozyHitWords?.length > 0 && (
+            <div className="viz_tokens_group">
+              <div className="viz_tokens_label">Cozy hits:</div>
+              <div className="viz_tokens_list">
+                {snapshot.cozyHitWords.join(", ")}
+              </div>
+            </div>
+          )}
+
+          {snapshot.weirdHitWords?.length > 0 && (
+            <div className="viz_tokens_group">
+              <div className="viz_tokens_label">Weird hits:</div>
+              <div className="viz_tokens_list">
+                {snapshot.weirdHitWords.join(", ")}
+              </div>
+            </div>
+          )}
+
+          {snapshot.selfAwareHitWords?.length > 0 && (
+            <div className="viz_tokens_group">
+              <div className="viz_tokens_label">Self-aware hits:</div>
+              <div className="viz_tokens_list">
+                {snapshot.selfAwareHitWords.join(", ")}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
       <p className="viz_footer_note">
         Typing:{" "}
         <strong>

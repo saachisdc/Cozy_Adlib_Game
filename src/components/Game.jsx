@@ -223,6 +223,10 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
             selfAwareHits: result.breakdown.selfAwareHits,
             wrongChoices: result.breakdown.wrongChoices,
             totalSteps,
+            // 👇 NEW
+            cozyHitWords: result.breakdown.cozyHitWords,
+            weirdHitWords: result.breakdown.weirdHitWords,
+            selfAwareHitWords: result.breakdown.selfAwareHitWords,
           });
 
           if (story.id === "story3_crunchy_video_game") {
@@ -272,6 +276,11 @@ export default function Game({ initialStory = Story3CrunchyVideoGame }) {
           selfAwareHits: partialResult.breakdown.selfAwareHits,
           wrongChoices: wrongChoicesSoFar,
           totalSteps,
+
+          // 👇 NEW
+          cozyHitWords: partialResult.breakdown.cozyHitWords,
+          weirdHitWords: partialResult.breakdown.weirdHitWords,
+          selfAwareHitWords: partialResult.breakdown.selfAwareHitWords,
         });
 
         // 👇 NEW: live NB viz for Story 3
